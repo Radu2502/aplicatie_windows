@@ -24,7 +24,7 @@ from typing import Callable, Sequence
 
 import numpy as np
 
-from ecvestru import cal_puncte, calcai_stabil, calitate, rtmpose, rtmpose_l
+from ecvestru import cal_puncte, calcai_stabil, calitate, rtmpose, rtmpose_l, schelet_cal
 from ecvestru import camera as K
 from ecvestru import progres as P
 from ecvestru import stocare as ST
@@ -245,7 +245,7 @@ def analyze(video_path: Path, gait: str, segment: tuple[int, int] | None = None,
             extended: bool = False, anchors: Sequence[TargetSeed] = (), uploaded: bool = False,
             heel_source: str = HEEL_MEDIAPIPE, heel_estimator: Callable | None = None, heel_stable: bool = False,
             horse_estimator: Callable | None = None, heel_model: str = HEEL_MODEL_M,
-            stages: P.Stages | None = None) -> AnalysisResult:
+            stages: P.Stages | None = None, horse_skeleton: bool = False) -> AnalysisResult:
     """Analiza unui clip pe intervalul din profil `segment` (cadre, inclusiv capetele). `name` e
     numele afișat (pentru un clip încărcat, numele original, nu cel al fișierului temporar).
     `extended` cere verificările analizelor noi; o țintă le cere întotdeauna. Fără ele, rezultatul și
@@ -257,7 +257,9 @@ def analyze(video_path: Path, gait: str, segment: tuple[int, int] | None = None,
     (ecvestru/calcai_stabil.py), doar pe calea RTMPose; oprit (implicit), rezultatul și JSON-ul sunt cele de
     dinainte. `heel_model` alege modelul RTMPose al stratului: m (implicit) sau l (RTMPose-l, pe toată calea RTMPose);
     l cere stratul pornit. `stages` (ecvestru/progres.py) primește începutul și durata fiecărei etape, pentru bara de
-    progres; doar observă, rezultatul e același cu sau fără."""
+    progres; doar observă, rezultatul e același cu sau fără. `horse_skeleton` (oprit implicit) adaugă scheletul calului
+    de sub călăreț pe cadrele analizate (ecvestru/schelet_cal.py, schema 1.6); rezultatul din cache rămâne cel fără el.
+    `horse_estimator` e estimatorul AP-10K (al stratului „călcâi stabil” și al scheletului calului)."""
     if heel_model not in (HEEL_MODEL_M, HEEL_MODEL_L):
         raise ValueError(f"Model RTMPose necunoscut: {heel_model}")
     if heel_model == HEEL_MODEL_L and not heel_stable:
@@ -279,11 +281,13 @@ def analyze(video_path: Path, gait: str, segment: tuple[int, int] | None = None,
     limitation = limitation_for(name, uploaded, target)
     if cached.exists():
         saved = AnalysisResult.from_json(cached.read_text(encoding="utf-8"))
-        return saved.model_copy(update={"limitation": limitation, "fallback_reason": fallback or saved.fallback_reason})
+        saved = saved.model_copy(update={"limitation": limitation,
+                                         "fallback_reason": fallback or saved.fallback_reason})
+        return _with_horse(horse_skeleton, video_path, saved, horse_estimator, stages)
     stages = stages or P.Stages()
     stages.plan([P.SKELETON] + [P.VIEW] * extended + [P.HORSES, P.CAMERA, P.TRACKING] * bool(target)
                 + [P.RTMPOSE] * (heel_source == HEEL_RTMPOSE) + [P.MEASURE] + [P.CAMERA] * extended
-                + [P.STABLE] * (heel_stable and heel_source == HEEL_RTMPOSE))
+                + [P.STABLE] * (heel_stable and heel_source == HEEL_RTMPOSE) + [P.HORSE_SKELETON] * horse_skeleton)
     with stages.stage(P.SKELETON):
         raw = ST.load_raw(video_path, name, video_hash, candidate, predictor)
     if extended:
@@ -332,7 +336,17 @@ def analyze(video_path: Path, gait: str, segment: tuple[int, int] | None = None,
         pipeline=pipeline, fallback_reason=no_skeleton, layers=_layers(pipeline, gated, ran_stable, heel_model))
     cached.parent.mkdir(parents=True, exist_ok=True)
     cached.write_text(result.to_json(), encoding="utf-8")
-    return result.model_copy(update={"fallback_reason": fallback or no_skeleton})
+    result = result.model_copy(update={"fallback_reason": fallback or no_skeleton})
+    return _with_horse(horse_skeleton, video_path, result, horse_estimator, stages)
+
+
+def _with_horse(horse_skeleton: bool, video_path: Path, result: AnalysisResult, horse_estimator: Callable | None,
+                stages: P.Stages | None) -> AnalysisResult:
+    """Cu opțiunea oprită, rezultatul neschimbat; pornită, cu scheletul calului (etapa are cache-ul ei)."""
+    if not horse_skeleton:
+        return result
+    with (stages or P.Stages()).stage(P.HORSE_SKELETON):
+        return schelet_cal.with_old_method(video_path, result, horse_estimator)
 
 
 # ---------- clipuri încărcate: doar într-un folder temporar, care se șterge ----------
@@ -407,7 +421,8 @@ def analyze_upload(data: bytes, filename: str, gait: str, segment: tuple[int, in
                    target: TargetSeed | None = None, extended: bool = False,
                    anchors: Sequence[TargetSeed] = (), heel_source: str = HEEL_MEDIAPIPE,
                    heel_estimator: Callable | None = None, heel_stable: bool = False,
-                   heel_model: str = HEEL_MODEL_M, stages: P.Stages | None = None) -> AnalysisResult:
+                   heel_model: str = HEEL_MODEL_M, stages: P.Stages | None = None, horse_skeleton: bool = False,
+                   horse_estimator: Callable | None = None) -> AnalysisResult:
     """Analiza unui clip încărcat: rulează pe o copie temporară, care se șterge, deci videoul nu rămâne.
     Rămân rezultatul JSON și cache-urile pe cadre din brut/, vedere/, cai/, camera/ și schelet/ (UPLOAD_KEPT), toate
     după hash-ul conținutului: numele original nu ajunge pe disc."""
@@ -416,6 +431,7 @@ def analyze_upload(data: bytes, filename: str, gait: str, segment: tuple[int, in
         whole_clip = (0, ST.video_info(path)[0] - 1)
         return analyze(path, gait, segment or whole_clip, name=ST.upload_name(ST.bytes_hash(data)), predictor=predictor,
                        target=target, extended=extended, anchors=anchors, uploaded=True, heel_source=heel_source,
-                       heel_estimator=heel_estimator, heel_stable=heel_stable, heel_model=heel_model, stages=stages)
+                       heel_estimator=heel_estimator, heel_stable=heel_stable, heel_model=heel_model, stages=stages,
+                       horse_skeleton=horse_skeleton, horse_estimator=horse_estimator)
 
     return with_temp_file(data, filename, run)

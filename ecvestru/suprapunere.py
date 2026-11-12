@@ -27,10 +27,12 @@ import numpy as np
 from matplotlib import get_data_path
 from PIL import Image, ImageDraw, ImageFont
 
+from ecvestru import cal_puncte as CP
 from ecvestru import calitate as C
 from ecvestru import masurare as M
 from ecvestru import rtmpose
 from ecvestru import schelet as Z
+from ecvestru import schelet_cal as SC
 from ecvestru import stocare as ST
 from ecvestru.rezultat import HEEL_RTMPOSE, AnalysisResult, FrameMeasure
 
@@ -67,6 +69,10 @@ SMOOTH_PADLEN = 15             # extensia impară la capete, ca filtfilt din sci
 SMOOTH_NOTE = ("Netezire pentru afișare: lanțul din film și curbele din grafic sunt netezite (Butterworth, 6 Hz, pe "
                "segmente fără goluri și fără schimbări de sursă sau de orientare). Valorile din bandă, medianele, "
                "raportul și JSON-ul nu se schimbă.")
+HORSE_BGR = (255, 255, 0)      # turcoaz: scheletul calului (opțiunea „Scheletul calului”), altă culoare decât călărețul
+HORSE_LEGEND = (f"Turcoaz = scheletul calului (AP-10K), doar punctele cu scor ≥ {str(SC.SCORE_MIN).replace('.', ',')}; "
+                "doar afișare, nicio valoare nu vine din el.")
+_HORSE_BONES = tuple((CP.AP10K.index(a), CP.AP10K.index(b)) for a, b in CP.AP10K_BONES)
 BAND_BGR = (0, 0, 0)
 LINE_DIVISOR = 300             # grosimea liniilor: latura mică a cadrului / atât
 BAND_FRACTION = 0.05           # înălțimea benzii, din latura mică a cadrului
@@ -224,13 +230,29 @@ def _draw_chain(img: np.ndarray, points: dict, measure: FrameMeasure) -> None:
     cv2.circle(img, hip, 3 * thick + 1, TRUNK_BGR, -1, cv2.LINE_AA)
 
 
+def _draw_horse(img: np.ndarray, points: list) -> None:
+    """Scheletul calului (17 puncte AP-10K, None = nedesenat), sub călăreț, în HORSE_BGR, cu contur închis."""
+    thick = max(1, round(min(img.shape[:2]) / LINE_DIVISOR))
+    lines = [(points[a], points[b]) for a, b in _HORSE_BONES if points[a] is not None and points[b] is not None]
+    for a, b in lines:
+        cv2.line(img, _pixel(a), _pixel(b), OUTLINE_BGR, thick + 3, cv2.LINE_AA)
+    for a, b in lines:
+        cv2.line(img, _pixel(a), _pixel(b), HORSE_BGR, thick, cv2.LINE_AA)
+    for p in points:
+        if p is not None:
+            cv2.circle(img, _pixel(p), 2 * thick + 1, HORSE_BGR, -1, cv2.LINE_AA)
+
+
 def overlay_frame(frame: np.ndarray, points: dict | None, measure: FrameMeasure, blur: bool = False,
-                  bones: tuple | None = None, rejected: list | tuple = ()) -> np.ndarray:
+                  bones: tuple | None = None, rejected: list | tuple = (), horse: list | None = None) -> np.ndarray:
     """Cadrul cu scheletul (`bones`, vezi `_draw_bones`), pe orice cadru cu călăreț, și banda.
     Lanțul apare doar pe unghiurile măsurate, niciodată pe cele respinse, deci nimic nu pare măsurat.
-    `rejected` (puncte în pixeli, visibility, motiv) se desenează doar pe cadrele nemăsurate."""
+    `rejected` (puncte în pixeli, visibility, motiv) se desenează doar pe cadrele nemăsurate. `horse` (cele 17 puncte
+    ale calului, None = nedesenat) se desenează primul, sub călăreț."""
     h, w = frame.shape[:2]
     img = cv2.GaussianBlur(frame, (0, 0), blur_sigma(h, w, points)) if blur else frame.copy()
+    if horse is not None:
+        _draw_horse(img, horse)
     if bones is not None:
         _draw_bones(img, bones)
     if measure.trunk_deg is None:
@@ -388,16 +410,17 @@ def _encoder(width: int, height: int, fps: float, target: Path) -> subprocess.Po
 
 
 def film_bytes(video_path: Path, frames: list[FrameMeasure], raw: M.Raw, fps: float, blur: bool = False,
-               skeleton=None) -> bytes:
-    """MP4 H.264 cu câte un cadru pentru fiecare element din `frames`; fișierul temporar se șterge imediat."""
+               skeleton=None, horse: dict | None = None) -> bytes:
+    """MP4 H.264 cu câte un cadru pentru fiecare element din `frames`; fișierul temporar se șterge imediat. `horse`:
+    cadru → cele 17 puncte ale calului (schelet_cal.drawn_points); None sau gol = fără scheletul calului."""
     wanted = {f.frame: f for f in frames}
     pixels = None if skeleton is None else skeleton.xy_px
     with tempfile.TemporaryDirectory(prefix="ecvestru_film_", dir=M.temp_root(), ignore_cleanup_errors=True) as tmp:
-        return _encode(video_path, wanted, raw, fps, blur, skeleton, pixels, Path(tmp) / FILM_NAME)
+        return _encode(video_path, wanted, raw, fps, blur, skeleton, pixels, Path(tmp) / FILM_NAME, horse or {})
 
 
 def _encode(video_path: Path, wanted: dict, raw: M.Raw, fps: float, blur: bool, skeleton, pixels,
-            target: Path) -> bytes:
+            target: Path, horse: dict) -> bytes:
     cap = cv2.VideoCapture(str(video_path))
     encoder = None
     try:
@@ -411,7 +434,8 @@ def _encode(video_path: Path, wanted: dict, raw: M.Raw, fps: float, blur: bool, 
             points = (raw.get(index) or {}).get("points")
             bones = None if pixels is None else (pixels[index], skeleton.visibility[index], str(skeleton.side[index]))
             others = () if skeleton is None else skeleton.shown_rejected_at(index)
-            encoder.stdin.write(overlay_frame(frame, points, wanted[index], blur, bones, others).tobytes())
+            encoder.stdin.write(overlay_frame(frame, points, wanted[index], blur, bones, others,
+                                              horse.get(index)).tobytes())
         if encoder is None:
             raise FilmError("Nu am putut face filmul: clipul nu are cadre în interval.")
         encoder.stdin.close()
@@ -444,9 +468,15 @@ def _shown_raw(video_path: Path, result: AnalysisResult, smooth: bool):
 
 
 def clip_film(video_path: Path, result: AnalysisResult, blur: bool = False, smooth: bool = False) -> bytes:
-    """Filmul unui rezultat, din punctele deja salvate în cache-ul brut; cu `smooth`, lanțul netezit pentru afișare."""
+    """Filmul unui rezultat, din punctele deja salvate în cache-ul brut; cu `smooth`, lanțul netezit pentru afișare. Cu
+    scheletul calului în rezultat (opțiunea pornită), îl desenează și pe el."""
     raw, skeleton, shown = _shown_raw(video_path, result, smooth)
-    return film_bytes(Path(video_path), result.frames, raw if shown is None else shown.raw, result.fps, blur, skeleton)
+    horse = SC.drawn_points(result.horse_keypoints)
+    if not horse:
+        return film_bytes(Path(video_path), result.frames, raw if shown is None else shown.raw, result.fps, blur,
+                          skeleton)
+    return film_bytes(Path(video_path), result.frames, raw if shown is None else shown.raw, result.fps, blur, skeleton,
+                      horse=horse)
 
 
 def display_series(video_path: Path, result: AnalysisResult, smooth: bool) -> tuple[list, list]:

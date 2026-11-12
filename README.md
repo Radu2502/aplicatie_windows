@@ -67,6 +67,9 @@ Pe Mac cu procesor Intel aplicația nu e suportată.
    călărețului. Click-urile se țin doar în sesiunea paginii.
 5. Apasă **Analizează**. Dacă ținta se pierde, pagina oferă un buton care deschide primul cadru pierdut, pentru încă un
    click pe același călăreț.
+6. Opțional, bifează **Scheletul calului** (oprită implicit): cele 17 puncte ale calului țintă se desenează în film
+   (doar pe metoda veche) și se adaugă în JSON (`horse_keypoints`, schema 1.6); unghiurile și raportul nu se schimbă,
+   iar prima analiză a unui clip durează mai mult.
 
 ## Modelele
 
@@ -106,6 +109,7 @@ fixate în cod. După descărcare, analizele merg și fără internet.
   - `camera.py`: mișcarea camerei între cadre;
   - `directie_cal.py`: direcția calului din punctele AP-10K;
   - `cal_puncte.py`: punctele calului (AP-10K);
+  - `schelet_cal.py`: opțiunea „Scheletul calului” (punctele calului țintă în film și în JSON);
   - `calareti.py`: identitatea călărețului-țintă pe clipurile dintr-un set local;
   - `inventar.py`: citirea cadrelor și extragerea posturilor MediaPipe;
   - `verificare.py`: unghiurile pe cadru din punctele MediaPipe, segmentele din profil, desenul scheletului;

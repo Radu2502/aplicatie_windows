@@ -45,6 +45,13 @@ AP10K = ("left_eye", "right_eye", "nose", "neck", "root_of_tail", "left_shoulder
          "right_knee", "right_back_paw")
 PAWS = ("left_front_paw", "right_front_paw", "left_back_paw", "right_back_paw")
 REPORTED = ("nose", "neck", "root_of_tail", *PAWS)
+# Oasele (legăturile dintre puncte), ca skeleton_info din același fișier MMPose: cap, trunchi, cele patru picioare
+AP10K_BONES = (("left_eye", "right_eye"), ("left_eye", "nose"), ("right_eye", "nose"), ("nose", "neck"),
+               ("neck", "root_of_tail"), ("neck", "left_shoulder"), ("left_shoulder", "left_elbow"),
+               ("left_elbow", "left_front_paw"), ("neck", "right_shoulder"), ("right_shoulder", "right_elbow"),
+               ("right_elbow", "right_front_paw"), ("root_of_tail", "left_hip"), ("left_hip", "left_knee"),
+               ("left_knee", "left_back_paw"), ("root_of_tail", "right_hip"), ("right_hip", "right_knee"),
+               ("right_knee", "right_back_paw"))
 SCORE_MIN = 0.3              # pragul de afișare al punctelor din MMPose și rtmlib (kpt_thr)
 
 # Intrarea modelului: config rtmpose-m_8xb64-210e_ap10k-256x256 și forma intrării din end2end.onnx (1, 3, 256, 256)
@@ -149,15 +156,28 @@ class ClipRun:
 def run_clip(video_path: Path, boxes: dict, hips: np.ndarray | None, estimator: Callable) -> ClipRun:
     """Punctele calului pe fiecare cadru cu casetă de cal; cadrele se citesc secvențial (indicele OpenCV)."""
     n_frames = ST.video_info(Path(video_path))[0]
+    chosen = np.full((n_frames, 4), np.nan)
+    for index in range(n_frames):
+        box = select_box(boxes.get(index, []), None if hips is None else hips[index])
+        if box is not None:
+            chosen[index] = box
+    return run_boxes(video_path, chosen, estimator)
+
+
+def run_boxes(video_path: Path, boxes: np.ndarray, estimator: Callable) -> ClipRun:
+    """Punctele calului pe cadrele cu o casetă dată (`boxes`: (N, 4) x0, y0, x1, y1; NaN = fără cal); o singură
+    citire secvențială a clipului, până la ultimul cadru cu casetă."""
+    n_frames = len(boxes)
     points = np.full((n_frames, len(AP10K), 2), np.nan)
     scores = np.full((n_frames, len(AP10K)), np.nan)
     used = np.full((n_frames, 4), np.nan)
     seconds = 0.0
+    wanted = np.flatnonzero(~np.isnan(boxes).any(axis=1))
     capture = cv2.VideoCapture(str(video_path))
     try:
-        for index in range(n_frames):
-            box = select_box(boxes.get(index, []), None if hips is None else hips[index])
-            if box is None:
+        for index in range(int(wanted[-1]) + 1 if len(wanted) else 0):
+            box = boxes[index]
+            if np.isnan(box).any():
                 if not capture.grab():
                     break
                 continue

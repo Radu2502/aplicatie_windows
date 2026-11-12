@@ -16,6 +16,7 @@ from ecvestru import click_tinta as CT
 from ecvestru import masurare as M
 from ecvestru import progres as P
 from ecvestru import router_pilot as RP
+from ecvestru import schelet_cal as SC
 from ecvestru import stocare as ST
 from ecvestru import suprapunere as S
 from ecvestru.rezultat import GAITS, HEEL_MEDIAPIPE, HEEL_MODEL_M, TargetSeed
@@ -65,6 +66,12 @@ HEEL_STABLE_NOTE = ("Stratul opțional „călcâi stabil”, doar pe calea RTMP
 HEEL_MODEL_TITLE = "Modelul RTMPose al stratului"
 INTERVAL_UNCHECKED = "Intervalul implicit e tot clipul: nu există interval verificat manual."
 BAR_START = "Pornesc analiza…"
+HORSE_SKELETON_LABEL = "Scheletul calului"
+HORSE_SKELETON_HELP = ("Opțional, oprit implicit: cele 17 puncte AP-10K ale calului țintă (calul de sub călăreț pe "
+                       "metoda veche, calul urmărit pe urmărirea țintei), desenate în film și adăugate în JSON "
+                       "(`horse_keypoints`, schema 1.6). Doar afișare: unghiurile, medianele și raportul nu se "
+                       "schimbă. "
+                       "Prima rulare pe un clip calculează punctele calului și durează mai mult.")
 METHOD_TITLE = "Metoda"
 METHOD_HELP = ("Automată (implicit): cu doi sau mai mulți cai călăriți în primele secunde ale clipului, urmărirea "
                "țintei (cere un click pe calul călărețului, dacă nu există unul salvat); altfel, metoda veche. "
@@ -136,9 +143,10 @@ def chart_series(result, name: str, data: bytes | None) -> tuple[list, list]:
 
 def make_analysis(name: str, data: bytes | None, gait: str, segment: tuple[int, int], seeds=(),
                   heel_source: str = HEEL_MEDIAPIPE, heel_stable: bool = False, heel_model: str = HEEL_MODEL_M,
-                  stages: P.Stages | None = None):
+                  stages: P.Stages | None = None, horse_skeleton: bool = False):
     target, anchors = (seeds[0], seeds[1:]) if seeds else (None, ())
     layer = {"heel_stable": True, "heel_model": heel_model} if heel_stable else {}   # oprit: fără argumentele stratului
+    layer |= {"horse_skeleton": True} if horse_skeleton else {}
     if data is None:
         return M.analyze(M.V.VIDEOS / name, gait, segment, target=target, anchors=anchors, heel_source=heel_source,
                          stages=stages, **layer)
@@ -146,19 +154,21 @@ def make_analysis(name: str, data: bytes | None, gait: str, segment: tuple[int, 
                             heel_source=heel_source, stages=stages, **layer)
 
 
-def run_tracked(name: str, data: bytes | None, gait: str, segment: tuple[int, int], click) -> tuple[list, dict]:
+def run_tracked(name: str, data: bytes | None, gait: str, segment: tuple[int, int], click,
+                horse_skeleton: bool = False) -> tuple[list, dict]:
     """Analiza pe ținta urmărită, cu bara de progres pe cele 4 etape; fără film încă."""
     bar = st.progress(0.0, text=BAR_START)
+    horse = {"horse_skeleton": True} if horse_skeleton else {}   # oprit: fără argumente noi
 
     def started(stage: str, k: int, total: int) -> None:
         bar.progress(P.fraction(0, 1, k, total), text=P.bar_text("", stage, k, total))
     stages = P.Stages(on_start=started)
     try:
         if data is None:
-            res = AU.analyze(M.V.VIDEOS / name, gait, segment, click=click, stages=stages)
+            res = AU.analyze(M.V.VIDEOS / name, gait, segment, click=click, stages=stages, **horse)
         else:
             res = M.with_temp_file(data, name, lambda path: AU.analyze(path, gait, segment, name=name, click=click,
-                                                                      stages=stages, uploaded=True))
+                                                                      stages=stages, uploaded=True, **horse))
     finally:
         bar.empty()
     return [("", res, None)], {"": stages.durations()}
@@ -172,7 +182,8 @@ def auto_choice(name: str, data: bytes | None, content: str) -> AU.MethodChoice:
 
 
 def run_analyses(name: str, data: bytes | None, gait: str, segment: tuple[int, int], targets: dict,
-                 heel_source: str, heel_stable: bool, heel_model: str) -> tuple[list, dict]:
+                 heel_source: str, heel_stable: bool, heel_model: str, horse_skeleton: bool = False
+                 ) -> tuple[list, dict]:
     """Analiza fiecărui călăreț ales (sau a clipului, fără alegeri) și filmul lui, cu bara de progres pe etape.
     Întoarce [(eticheta, rezultatul, filmul)] și duratele etapelor pe etichetă."""
     runs = list(targets.items()) or [("", ())]
@@ -184,7 +195,8 @@ def run_analyses(name: str, data: bytes | None, gait: str, segment: tuple[int, i
                 bar.progress(P.fraction(i, len(runs), k, total), text=P.bar_text(label, stage, k, total))
             stages = P.Stages(on_start=started)
             stages.plan([P.FILM])
-            res = make_analysis(name, data, gait, segment, seeds, heel_source, heel_stable, heel_model, stages)
+            res = make_analysis(name, data, gait, segment, seeds, heel_source, heel_stable, heel_model, stages,
+                                horse_skeleton)
             with stages.stage(P.FILM):
                 film = make_film(res, name, data)
             done.append((label, res, film))
@@ -300,6 +312,8 @@ def show(result, film: bytes | None, label: str = "", series: tuple[list, list] 
             st.caption(S.SIDE_LEGEND)
             st.caption(S.VISIBILITY_LEGEND)
             st.caption(S.REJECTED_LEGEND)
+            if result.horse_keypoints is not None:
+                st.caption(S.HORSE_LEGEND)
     with right:
         st.line_chart(df, x_label="cadru (indice OpenCV)", y_label="grade față de verticală")
         if ss.get("an-smooth"):
@@ -395,9 +409,11 @@ if stable and not baseline:
     labels = {label: model for model, label in M.HEEL_MODEL_LABELS.items()}
     heel_model = labels[st.radio(HEEL_MODEL_TITLE, list(labels), horizontal=True, key="an-heel-model")]
 heel_stable = stable and not baseline
+horse_skeleton = st.checkbox(HORSE_SKELETON_LABEL, value=SC.APP_DEFAULT_HORSE_SKELETON, key="an-horse-skeleton",
+                             help=HORSE_SKELETON_HELP)
 st.caption(LICENSE_NOTE)
 key = (content, segment, gait, heel_source, heel_stable, heel_model,
-       tuple((k, s.frame, s.x, s.y) for k, seeds in sorted(targets.items()) for s in seeds), method)
+       tuple((k, s.frame, s.x, s.y) for k, seeds in sorted(targets.items()) for s in seeds), method, horse_skeleton)
 if tracked:
     cached = AU.cache_path(name if data is None else ST.upload_name(content), content).exists()
     st.caption(AU.estimate_text(n_frames, cached))
@@ -416,9 +432,11 @@ if st.button("Analizează", type="primary", key="an-run"):
             run = known.method
         if run == AU.METHOD_TRACKED:
             click = next(iter(targets.get(TARGET_LABELS[0], ())), None)
-            done, times = run_tracked(name if data is None else ST.upload_name(content), data, gait, segment, click)
+            done, times = run_tracked(name if data is None else ST.upload_name(content), data, gait, segment, click,
+                                      horse_skeleton)
         else:
-            done, times = run_analyses(name, data, gait, segment, targets, heel_source, heel_stable, heel_model)
+            done, times = run_analyses(name, data, gait, segment, targets, heel_source, heel_stable, heel_model,
+                                       horse_skeleton)
     except AU.TargetNeeded:
         st.warning(AU.CLICK_NEEDED_TEXT)
     except ValueError as e:

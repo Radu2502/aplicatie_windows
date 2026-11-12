@@ -8,10 +8,14 @@ from __future__ import annotations
 import json
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 SCHEMA_VERSION = "1.4"
 COMBINED_SCHEMA_VERSION = "1.5"   # rezultatul cu vederi (profil + față/spate); calea implicită rămâne 1.4
+# AnalysisResult cu opțiunea „Scheletul calului” pornită (câmpul `horse_keypoints`). „1.6”, nu „1.5”: 1.5 e deja
+# rezultatul cu vederi (COMBINED_SCHEMA_VERSION), alt document.
+HORSE_SCHEMA_VERSION = "1.6"
+HORSE_POINTS = 17     # punctele AP-10K pe un cadru (numele și ordinea: ecvestru/cal_puncte.py, AP10K)
 QUALITY_VERSION = 2   # stratul de calitate: se mărește când se schimbă indicatorii sau poarta
 GAITS = ("pas", "trap", "galop")
 HEEL_MEDIAPIPE, HEEL_RTMPOSE = "mediapipe", "rtmpose"   # sursa călcâiului
@@ -122,8 +126,31 @@ class LayerVersions(_Model):
     heel_stable: int | None = Field(None, description="stratul opțional „călcâi stabil”; lipsește din JSON, oprit")
 
 
+class HorsePoint(_Model):
+    """Un punct AP-10K al calului, în pixelii cadrului; x și y lipsesc (None) sub pragul de scor sau în afara
+    imaginii, scorul rămâne."""
+    name: str
+    x: float | None = None
+    y: float | None = None
+    score: float
+
+
+class HorseFrame(_Model):
+    """Un cadru analizat: cele 17 puncte ale calului țintă, în ordinea AP-10K, sau None fără casetă de cal."""
+    frame: int = Field(ge=0)
+    points: list[HorsePoint] | None = Field(None, min_length=HORSE_POINTS, max_length=HORSE_POINTS)
+
+
+class HorseKeypoints(_Model):
+    """Scheletul calului (opțiunea „Scheletul calului”): doar afișare, nicio valoare a analizei nu vine din el."""
+    version: int = Field(description="versiunea etapei (ecvestru/schelet_cal.py)")
+    model: str = Field(description="primele 8 caractere din sha256-ul pachetului AP-10K")
+    score_min: float = Field(description="pragul de scor sub care x și y lipsesc")
+    frames: list[HorseFrame]
+
+
 class AnalysisResult(_Model):
-    schema_version: Literal["1.4"] = SCHEMA_VERSION
+    schema_version: Literal["1.4", "1.6"] = SCHEMA_VERSION
     video: str
     video_hash: str
     gait: Literal["pas", "trap", "galop"]
@@ -147,11 +174,21 @@ class AnalysisResult(_Model):
         None, description="de ce a rulat linia de bază deși s-a cerut RTMPose; None = a rulat calea cerută")
     layers: LayerVersions | None = Field(None, description="versiunile straturilor")
     orientation: OrientationSummary | None = Field(None, description="orientarea după labă; doar pe calea RTMPose")
+    horse_keypoints: HorseKeypoints | None = Field(
+        None, description="scheletul calului pe cadrele analizate; doar cu opțiunea pornită (schema 1.6)")
+
+    @model_validator(mode="after")
+    def _schema_matches_the_horse(self) -> AnalysisResult:
+        expected = SCHEMA_VERSION if self.horse_keypoints is None else HORSE_SCHEMA_VERSION
+        if self.schema_version != expected:
+            raise ValueError(f"schema {self.schema_version}: cu scheletul calului se cere {HORSE_SCHEMA_VERSION}, "
+                             f"fără el {SCHEMA_VERSION}")
+        return self
 
     def to_json(self) -> str:
         """Câmpurile goale lipsesc; fără bloc `orientation` (linia de bază) lipsesc și `facing*` de pe cadre, deci
         JSON-ul liniei de bază are câmpurile din schema 1.2, plus `pipeline`, `fallback_reason` și `layers`."""
-        exclude: dict = {name: True for name in ("target", "camera", "anchors", "orientation")
+        exclude: dict = {name: True for name in ("target", "camera", "anchors", "orientation", "horse_keypoints")
                          if not getattr(self, name)}
         if self.orientation is None:
             exclude["frames"] = {"__all__": {"facing", "facing_source"}}

@@ -36,6 +36,7 @@ from ecvestru import calitate as C
 from ecvestru import masurare as M
 from ecvestru import progres as P
 from ecvestru import rtmpose as R
+from ecvestru import schelet_cal as SC
 from ecvestru import stocare as ST
 from ecvestru import tinta as T
 from ecvestru import urmarire_multi as U
@@ -380,10 +381,32 @@ def result_cache_path(name: str, video_hash: str, segment: tuple[int, int], gait
     return M.result_cache_path(name, video_hash, CANDIDATE_LABEL, segment, gait, seed, False, (), M.HEEL_RTMPOSE)
 
 
+def target_horse_boxes(tracks: U.ClipTracks, choice: U.Choice) -> np.ndarray:
+    """Caseta calului țintă pe fiecare cadru (N, 4) x0, y0, x1, y1; NaN unde ținta lipsește."""
+    out = np.full((tracks.n_frames, 4), np.nan)
+    for frame, hid in enumerate(choice.horse_ids[:tracks.n_frames]):
+        if hid is not None and hid in tracks.horses[frame]:
+            out[frame] = tracks.horses[frame][hid]
+    return out
+
+
+def with_horse(video_path: Path, result: AnalysisResult, tracks: U.ClipTracks, seed: TargetSeed,
+               choice: U.Choice | None, estimator=None) -> AnalysisResult:
+    """Rezultatul cu scheletul calului urmărit (schema 1.6). Alegerea țintei se refolosește sau, doar când cache-ul
+    etapei lipsește, se calculează din nou."""
+    def boxes() -> np.ndarray:
+        return target_horse_boxes(tracks, choice or choose(video_path, tracks, seed))
+    run = SC.tracked_points(video_path, result.video, result.video_hash, CANDIDATE_LABEL, seed, boxes, estimator)
+    _, width, height = ST.video_props(video_path)
+    return SC.attach(result, run, width, height)
+
+
 def analyze(video_path: Path, gait: str, segment: tuple[int, int] | None = None, name: str | None = None,
             click: TargetSeed | None = None, stages: P.Stages | None = None, uploaded: bool = False,
-            threads: int = 1) -> AnalysisResult:
-    """Analiza pe ținta urmărită; TargetNeeded dacă trebuie un click. Același model de rezultat ca metoda veche."""
+            threads: int = 1, horse_skeleton: bool = False, horse_estimator=None) -> AnalysisResult:
+    """Analiza pe ținta urmărită; TargetNeeded dacă trebuie un click. Același model de rezultat ca metoda veche.
+    `horse_skeleton` (oprit implicit) adaugă scheletul calului urmărit pe cadrele analizate (ecvestru/schelet_cal.py,
+    schema 1.6); rezultatul din cache rămâne cel fără el."""
     video_path = Path(video_path)
     name = name or video_path.name
     video_hash = ST.file_hash(video_path)
@@ -393,14 +416,18 @@ def analyze(video_path: Path, gait: str, segment: tuple[int, int] | None = None,
     if a > b:
         raise ValueError(f"Interval gol: {segment}")
     stages = stages or P.Stages()
-    stages.plan(STAGES)
+    stages.plan(STAGES + (P.HORSE_SKELETON,) * horse_skeleton)
     tracks, scores = heavy_pass(video_path, name, video_hash, stages, threads)
     seed, _ = resolve_target(tracks, video_hash, click)
     cached = result_cache_path(name, video_hash, (a, b), gait, seed)
     limitation = M.limitation_for(name, uploaded, seed)
     if cached.exists():
         saved = AnalysisResult.from_json(cached.read_text(encoding="utf-8"))
-        return saved.model_copy(update={"limitation": limitation})
+        saved = saved.model_copy(update={"limitation": limitation})
+        if not horse_skeleton:
+            return saved
+        with stages.stage(P.HORSE_SKELETON):
+            return with_horse(video_path, saved, tracks, seed, None, horse_estimator)
     _, width, height = ST.video_props(video_path)        # doar metadatele, fără cadre
     with stages.stage(TRACKING):
         choice = choose(video_path, tracks, seed)
@@ -418,7 +445,10 @@ def analyze(video_path: Path, gait: str, segment: tuple[int, int] | None = None,
         orientation=orientation, pipeline=M.PIPELINE_RTMPOSE, layers=M._layers(M.PIPELINE_RTMPOSE, True))
     cached.parent.mkdir(parents=True, exist_ok=True)
     cached.write_text(result.to_json(), encoding="utf-8")
-    return result
+    if not horse_skeleton:
+        return result
+    with stages.stage(P.HORSE_SKELETON):
+        return with_horse(video_path, result, tracks, seed, choice, horse_estimator)
 
 
 def needs_click(video_path: Path) -> bool:
