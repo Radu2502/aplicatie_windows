@@ -1,0 +1,8 @@
+[browser]
+# Fără statistici de folosire trimise către Streamlit.
+gatherUsageStats = false
+
+[server]
+# Aplicația se vede doar pe acest calculator, nu și din rețea.
+address = "localhost"
+headless = false

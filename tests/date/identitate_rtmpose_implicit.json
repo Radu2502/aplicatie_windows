@@ -1,0 +1,67 @@
+{
+ "fara_campurile": [
+  "schema_version"
+ ],
+ "clipuri": {
+  "clip_150054.mp4": {
+   "mediapipe": "c3e7bebd848e0592e8fc2e1819aa9980ae943a67be3b1b22a781d6fb5c7a35f3",
+   "rtmpose": "f0306231f135206912683a42f746b62d8c010f4fe65370a026ca103488581d8a"
+  },
+  "clip_150110.mp4": {
+   "mediapipe": "0049f2a472802c50d3f9226e8dad6e71ef1ada95b3fcff551fbf0532ad595946",
+   "rtmpose": "075796900ce9a239a5ace78c4ec7916a807a505042463aad01f8648f1d2e9788"
+  },
+  "clip_150202.mp4": {
+   "mediapipe": "26832fb3d89b3f3d77070b1660217b40952e6db664d37a81215912e8024e9604",
+   "rtmpose": "29fc843bb9c8310ff07b06fa5b37212290dc1bab2c528f6b1d1458f2038b8cbc"
+  },
+  "clip_150307.mp4": {
+   "mediapipe": "3439ac14a0f7a506c0da5d4875a85559c4cc86212debb697c8457c99656f25d6",
+   "rtmpose": "d0664a09e0e90218ea4c40f72b0db1364670c462ec769eca9c8d7d8cffda2067"
+  },
+  "clip_150415.mp4": {
+   "mediapipe": "9ae15838d120dee8b5a5d05a7f8a66791fc9206f30c54d7a809e07be0ea498c4",
+   "rtmpose": "f1cd67599873b209f25fedad5a695c4de509d6081489ef1e99a2a1f9d790b7f8"
+  },
+  "clip_150826.mp4": {
+   "mediapipe": "585ed34dda34ae28ca20289f703e65d6ddc3a2cda388c60446c07910fbbeac1f",
+   "rtmpose": "410eb26569f5b4623253d9d9f90f36e85c0267d1f85d01c9b8c4305fe3a1f343"
+  },
+  "clip_150957.mp4": {
+   "mediapipe": "37f835351e34d9aa433c55bf0fb5123e9c82324dac2d62bf5ebb759b0286dcce",
+   "rtmpose": "665a3286f1bc0ffa7238335e84d0943e981ed5cae4ef797814d8ac15b4005d87"
+  },
+  "clip_151155.mp4": {
+   "mediapipe": "c413b479b9ee950c8508d67936920204f79ed3a3331bb2db70494cd0d3546084",
+   "rtmpose": "a66c896ab52ac94a154b50f00bea3d056df074c4d2aa2f88bef0571383d1824f"
+  },
+  "clip_151302.mp4": {
+   "mediapipe": "4a938a23932612781972917336c8fa830312083ec828e5ac2ff63e8e42f1f90c",
+   "rtmpose": "470a50c01130674723cce58a8f263e45f3b9aa2b96486d85699096024d64aa7b"
+  },
+  "clip_151902.mp4": {
+   "mediapipe": "7acc01de439188209a62ad8b4030a482208752e2d0bfac0be49c90e5cb8d8c48",
+   "rtmpose": "e40ff9a823749996e89f6b6f28c394c5acf050e7bb0e47a6af424164eafbd732"
+  },
+  "clip_152334.mp4": {
+   "mediapipe": "045ccd1d14c56df0f287e99e12f5feb7200118a570c10e1f93e05a42670f751a",
+   "rtmpose": "e655b66021914fc211c02dfcf5ba6bfed5932fe47c26fc14822fc88da934e68b"
+  },
+  "clip_152429.mp4": {
+   "mediapipe": "7082ff760e952b7ffdb00950b713b43a48acf2f908216b87b08975bf54846770",
+   "rtmpose": "39bbf9e10fb6cdaec5b2b25968f0f536666eb43db987963d836a3e00746dd48f"
+  },
+  "clip_152456.mp4": {
+   "mediapipe": "80a812b6a2c4b270773c8eab0749931df26821c4c9a3ab98ef907fab59d42698",
+   "rtmpose": "64c2ac285198894c90e82929e518bf18ad0008c69ee9f36c50b6fcdd5a3fddbf"
+  },
+  "clip_152726.mp4": {
+   "mediapipe": "c4bbe1b029e2fd9be8f77b2013be0caee7fc2e7cdfdb5e0172ad277de5471e01",
+   "rtmpose": "8ad291c9478cc3952503400c8b21b5cb1b6194f6a299a9c2fdba18a1170ced3b"
+  },
+  "clip_152846.mp4": {
+   "mediapipe": "94176242065e754affdd8ad54e1c762470fda34a743e062015e4a60a85e0fc8d",
+   "rtmpose": "96645a0f7e5aa389c8f6bc8a21fe9b5f5e850896d128df2ea12dc690bb5c273a"
+  }
+ }
+}

@@ -1,0 +1,4986 @@
+{
+ "frames": [
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 150,
+   "leg_deg": -27.44453606249159,
+   "reason": null,
+   "trunk_deg": -2.579147139600355,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 151,
+   "leg_deg": -27.307505160786437,
+   "reason": null,
+   "trunk_deg": -2.5791660133539747,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 152,
+   "leg_deg": -27.681047579731676,
+   "reason": null,
+   "trunk_deg": -3.64121536680985,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 153,
+   "leg_deg": -28.072489397233852,
+   "reason": null,
+   "trunk_deg": -3.641192986662621,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 154,
+   "leg_deg": -28.07249060623665,
+   "reason": null,
+   "trunk_deg": -4.720121501432959,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 155,
+   "leg_deg": -28.22348298777044,
+   "reason": null,
+   "trunk_deg": -4.635458823732783,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 156,
+   "leg_deg": -28.339127831892608,
+   "reason": null,
+   "trunk_deg": -4.12231030668605,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 157,
+   "leg_deg": -29.327188940230336,
+   "reason": null,
+   "trunk_deg": -3.039388289616311,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 158,
+   "leg_deg": -29.054606169196024,
+   "reason": null,
+   "trunk_deg": -1.9749431321892346,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 159,
+   "leg_deg": -28.544244040747902,
+   "reason": null,
+   "trunk_deg": -2.935668645697751,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 160,
+   "leg_deg": -30.25644018920599,
+   "reason": null,
+   "trunk_deg": -2.9866254311349913,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 161,
+   "leg_deg": -30.774027575089516,
+   "reason": null,
+   "trunk_deg": -3.5137759752567836,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 162,
+   "leg_deg": -29.77914618545806,
+   "reason": null,
+   "trunk_deg": -3.544771520069225,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 163,
+   "leg_deg": -32.17864484117131,
+   "reason": null,
+   "trunk_deg": -2.556182942261487,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 164,
+   "leg_deg": -32.98851861253906,
+   "reason": null,
+   "trunk_deg": -3.012774406789958,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 165,
+   "leg_deg": -29.571256382399422,
+   "reason": null,
+   "trunk_deg": -1.9920925861786238,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 166,
+   "leg_deg": -30.465540479499843,
+   "reason": null,
+   "trunk_deg": -1.4943547988413284,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 167,
+   "leg_deg": -29.744874700916995,
+   "reason": null,
+   "trunk_deg": -0.49822247216591403,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 168,
+   "leg_deg": -28.700083401590504,
+   "reason": null,
+   "trunk_deg": -0.507014675418617,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 169,
+   "leg_deg": -21.20515275201825,
+   "reason": null,
+   "trunk_deg": 6.581933119015919,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 170,
+   "leg_deg": -20.790738198691237,
+   "reason": null,
+   "trunk_deg": 6.645279387963017,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 171,
+   "leg_deg": -21.037510249929237,
+   "reason": null,
+   "trunk_deg": 7.193475331637819,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 172,
+   "leg_deg": -19.55459093578075,
+   "reason": null,
+   "trunk_deg": 6.037683676303129,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 173,
+   "leg_deg": -18.152702828318812,
+   "reason": null,
+   "trunk_deg": 4.9459790768533365,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 174,
+   "leg_deg": -17.354012715470272,
+   "reason": null,
+   "trunk_deg": 5.092094020731308,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 175,
+   "leg_deg": -15.814073286650494,
+   "reason": null,
+   "trunk_deg": 5.7105606891840734,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 176,
+   "leg_deg": -14.42078910046853,
+   "reason": null,
+   "trunk_deg": 5.19444380874554,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 177,
+   "leg_deg": -14.34223472211005,
+   "reason": null,
+   "trunk_deg": 5.767886414742718,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 178,
+   "leg_deg": -15.033249101360134,
+   "reason": null,
+   "trunk_deg": 5.7105849279478615,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 179,
+   "leg_deg": -15.255113728712312,
+   "reason": null,
+   "trunk_deg": 6.404326979476938,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 180,
+   "leg_deg": -16.389543631765058,
+   "reason": null,
+   "trunk_deg": 6.215656565311931,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 181,
+   "leg_deg": -16.20904305697695,
+   "reason": null,
+   "trunk_deg": 4.528859044812719,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 182,
+   "leg_deg": -17.032880643435472,
+   "reason": null,
+   "trunk_deg": 5.194447728235011,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 183,
+   "leg_deg": -17.056968746826673,
+   "reason": null,
+   "trunk_deg": 4.127594105631074,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 184,
+   "leg_deg": -16.849293616915265,
+   "reason": null,
+   "trunk_deg": 3.4336051623926163,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 185,
+   "leg_deg": -16.581048815976324,
+   "reason": null,
+   "trunk_deg": 3.433643257514381,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 186,
+   "leg_deg": -16.87626279747396,
+   "reason": null,
+   "trunk_deg": 3.3997211278019974,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 187,
+   "leg_deg": -17.35402327724624,
+   "reason": null,
+   "trunk_deg": 2.779182270123918,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 188,
+   "leg_deg": -17.94524158941607,
+   "reason": null,
+   "trunk_deg": 3.3664582533157166,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 189,
+   "leg_deg": -17.744665540365155,
+   "reason": null,
+   "trunk_deg": 2.7006016018309933,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 190,
+   "leg_deg": -17.840213167412585,
+   "reason": null,
+   "trunk_deg": 2.161073559603082,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 191,
+   "leg_deg": -18.2360167467077,
+   "reason": null,
+   "trunk_deg": 2.1816395378481053,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 192,
+   "leg_deg": -27.64597180199921,
+   "reason": null,
+   "trunk_deg": -4.1976542807617605,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 193,
+   "leg_deg": -19.44003853087482,
+   "reason": null,
+   "trunk_deg": 3.3997123958485536,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 194,
+   "leg_deg": -20.037196279666663,
+   "reason": null,
+   "trunk_deg": 3.2704673645216324,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 195,
+   "leg_deg": -21.28264260187919,
+   "reason": null,
+   "trunk_deg": 3.7781969643279827,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 196,
+   "leg_deg": -22.029447925194745,
+   "reason": null,
+   "trunk_deg": 3.742986649579945,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 197,
+   "leg_deg": -22.249022722483684,
+   "reason": null,
+   "trunk_deg": 3.7781969583847523,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 198,
+   "leg_deg": -21.969599400642437,
+   "reason": null,
+   "trunk_deg": 3.23970029610213,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 199,
+   "leg_deg": -28.089181350645262,
+   "reason": null,
+   "trunk_deg": -5.10216525235819,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 200,
+   "leg_deg": -28.61045966596522,
+   "reason": null,
+   "trunk_deg": -4.969742299815925,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 201,
+   "leg_deg": -28.300756449157884,
+   "reason": null,
+   "trunk_deg": -4.553760839930471,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 202,
+   "leg_deg": -28.072483342001426,
+   "reason": null,
+   "trunk_deg": -4.594269126560522,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 203,
+   "leg_deg": -28.31972480816434,
+   "reason": null,
+   "trunk_deg": -5.102180879926136,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 204,
+   "leg_deg": -28.205227736599237,
+   "reason": null,
+   "trunk_deg": -5.1478795723843715,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 205,
+   "leg_deg": -19.65382123013676,
+   "reason": null,
+   "trunk_deg": 2.223959328713706,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 206,
+   "leg_deg": -19.83213875813952,
+   "reason": null,
+   "trunk_deg": 2.7524818194284077,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 207,
+   "leg_deg": -28.972073482383593,
+   "reason": null,
+   "trunk_deg": -5.1478991974723325,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 208,
+   "leg_deg": -20.556047648186116,
+   "reason": null,
+   "trunk_deg": 4.945971224566339,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 209,
+   "leg_deg": -20.384290357036118,
+   "reason": null,
+   "trunk_deg": 4.398705354995532,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 210,
+   "leg_deg": -28.07247052387851,
+   "reason": null,
+   "trunk_deg": -5.609292262024754,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 211,
+   "leg_deg": -27.201629909257907,
+   "reason": null,
+   "trunk_deg": -5.013138405115282,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 212,
+   "leg_deg": -28.886576278900513,
+   "reason": null,
+   "trunk_deg": -4.635472650144755,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 213,
+   "leg_deg": -19.19129109157023,
+   "reason": null,
+   "trunk_deg": 3.8506434360659765,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 214,
+   "leg_deg": -18.624661640007606,
+   "reason": null,
+   "trunk_deg": 3.778190880029417,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 215,
+   "leg_deg": -18.34148669040464,
+   "reason": null,
+   "trunk_deg": 3.778201122411589,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 216,
+   "leg_deg": -18.529346926284706,
+   "reason": null,
+   "trunk_deg": 4.945975802067757,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 217,
+   "leg_deg": -18.06047665531238,
+   "reason": null,
+   "trunk_deg": 4.9459689433715734,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 218,
+   "leg_deg": -18.245848651449094,
+   "reason": null,
+   "trunk_deg": 5.3893075296968975,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 219,
+   "leg_deg": -17.869540972789526,
+   "reason": null,
+   "trunk_deg": 5.545307451612519,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 220,
+   "leg_deg": -17.66334117919506,
+   "reason": null,
+   "trunk_deg": 3.8140910390503633,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 221,
+   "leg_deg": -16.876261205031764,
+   "reason": null,
+   "trunk_deg": 4.398698121897326,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 222,
+   "leg_deg": -16.073575732430985,
+   "reason": null,
+   "trunk_deg": 3.9259026150476513,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 223,
+   "leg_deg": -14.64737503302195,
+   "reason": null,
+   "trunk_deg": 3.333861078061331,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 224,
+   "leg_deg": -13.276398938158268,
+   "reason": null,
+   "trunk_deg": 3.8879236914246955,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 225,
+   "leg_deg": -12.925999294466628,
+   "reason": null,
+   "trunk_deg": 5.042460201570417,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 226,
+   "leg_deg": -13.063955293854079,
+   "reason": null,
+   "trunk_deg": 5.545320317344969,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 227,
+   "leg_deg": -11.668773770610581,
+   "reason": null,
+   "trunk_deg": 4.89908916753564,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 228,
+   "leg_deg": -11.920728469287544,
+   "reason": null,
+   "trunk_deg": 3.8506377035683492,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 229,
+   "leg_deg": -11.92074504385498,
+   "reason": null,
+   "trunk_deg": 3.9259151129734087,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 230,
+   "leg_deg": -12.264777873938693,
+   "reason": null,
+   "trunk_deg": 4.619908994208848,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 231,
+   "leg_deg": -12.200462149646954,
+   "reason": null,
+   "trunk_deg": 4.619931997974569,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 232,
+   "leg_deg": -13.017118509557669,
+   "reason": null,
+   "trunk_deg": 4.5739327041494855,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 233,
+   "leg_deg": -13.378538048843485,
+   "reason": null,
+   "trunk_deg": 3.4682255217513434,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 234,
+   "leg_deg": -13.963349892906939,
+   "reason": null,
+   "trunk_deg": 2.920713965731359,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 235,
+   "leg_deg": -14.109883545566825,
+   "reason": null,
+   "trunk_deg": 1.735712559480286,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 236,
+   "leg_deg": -14.697320613743742,
+   "reason": null,
+   "trunk_deg": 2.36138246975162,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 237,
+   "leg_deg": -14.912032103962344,
+   "reason": null,
+   "trunk_deg": 2.3372867921020446,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 238,
+   "leg_deg": -15.281613324317938,
+   "reason": null,
+   "trunk_deg": 2.313743604057381,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 239,
+   "leg_deg": -15.57254107732782,
+   "reason": null,
+   "trunk_deg": 4.004165701930894,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 240,
+   "leg_deg": -16.493466305013555,
+   "reason": null,
+   "trunk_deg": 4.619925727980625,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 241,
+   "leg_deg": -16.99082558618024,
+   "reason": null,
+   "trunk_deg": 6.215629600780959,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 242,
+   "leg_deg": -18.62786538630882,
+   "reason": null,
+   "trunk_deg": 7.891706967414228,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 243,
+   "leg_deg": -19.19127820062407,
+   "reason": null,
+   "trunk_deg": 7.740339236860408,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 244,
+   "leg_deg": -19.592284715246095,
+   "reason": null,
+   "trunk_deg": 7.740334815872345,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 245,
+   "leg_deg": -19.304456301827425,
+   "reason": null,
+   "trunk_deg": 7.193461238296118,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 246,
+   "leg_deg": -18.33832812999693,
+   "reason": null,
+   "trunk_deg": 7.193450844648821,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 247,
+   "leg_deg": -17.663343859447277,
+   "reason": null,
+   "trunk_deg": 8.365892489966672,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 248,
+   "leg_deg": -16.198727041421662,
+   "reason": null,
+   "trunk_deg": 8.285805339674189,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 249,
+   "leg_deg": -14.259471937865882,
+   "reason": null,
+   "trunk_deg": 7.6668027619534715,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 250,
+   "leg_deg": -14.03624897452068,
+   "reason": null,
+   "trunk_deg": 7.740342683661704,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 251,
+   "leg_deg": -13.663230466584265,
+   "reason": null,
+   "trunk_deg": 7.969624113610076,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 252,
+   "leg_deg": -13.293146181716788,
+   "reason": null,
+   "trunk_deg": 7.815291585039017,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 253,
+   "leg_deg": -12.665071282716546,
+   "reason": null,
+   "trunk_deg": 7.8917052359806785,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 254,
+   "leg_deg": -12.665064387896596,
+   "reason": null,
+   "trunk_deg": 7.891707811895977,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 255,
+   "leg_deg": -12.804264541711866,
+   "reason": null,
+   "trunk_deg": 7.263250217173352,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 256,
+   "leg_deg": -13.1857583528356,
+   "reason": null,
+   "trunk_deg": 7.193464674185548,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 257,
+   "leg_deg": -13.04188971239163,
+   "reason": null,
+   "trunk_deg": 7.740349195864443,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 258,
+   "leg_deg": -12.901068955444805,
+   "reason": null,
+   "trunk_deg": 7.3343784038724005,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 259,
+   "leg_deg": -12.831775360296007,
+   "reason": null,
+   "trunk_deg": 8.447518960371836,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 260,
+   "leg_deg": -13.276399152213274,
+   "reason": null,
+   "trunk_deg": 8.28579204271946,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 261,
+   "leg_deg": -13.50783942268622,
+   "reason": null,
+   "trunk_deg": 8.530763593992,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 262,
+   "leg_deg": -12.971101834175194,
+   "reason": null,
+   "trunk_deg": 7.969624861859062,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 263,
+   "leg_deg": -13.258867802279804,
+   "reason": null,
+   "trunk_deg": 7.3343940852915965,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 264,
+   "leg_deg": -13.877530735755505,
+   "reason": null,
+   "trunk_deg": 7.480904412879706,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 265,
+   "leg_deg": -13.881178558866416,
+   "reason": null,
+   "trunk_deg": 6.981055315167119,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 266,
+   "leg_deg": -14.191094259529445,
+   "reason": null,
+   "trunk_deg": 6.277303954656859,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 267,
+   "leg_deg": -14.264523404341881,
+   "reason": null,
+   "trunk_deg": 6.277315773378294,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 268,
+   "leg_deg": -12.994609304197615,
+   "reason": null,
+   "trunk_deg": 3.9258975882496085,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 269,
+   "leg_deg": -12.329752138437248,
+   "reason": null,
+   "trunk_deg": 3.8879193724349177,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 270,
+   "leg_deg": -11.430303000658052,
+   "reason": null,
+   "trunk_deg": 2.7791798496455966,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 271,
+   "leg_deg": -10.469176131543316,
+   "reason": null,
+   "trunk_deg": 2.806375952813618,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 272,
+   "leg_deg": -9.309939819106013,
+   "reason": null,
+   "trunk_deg": 3.468217439823436,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 273,
+   "leg_deg": -8.65254465100484,
+   "reason": null,
+   "trunk_deg": 2.834120300364884,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 274,
+   "leg_deg": -7.049169181371923,
+   "reason": null,
+   "trunk_deg": 2.9207127938848885,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 275,
+   "leg_deg": -6.237077955047221,
+   "reason": null,
+   "trunk_deg": 1.7356995636745614,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 276,
+   "leg_deg": -6.237073778405416,
+   "reason": null,
+   "trunk_deg": 1.7183592438464383,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 277,
+   "leg_deg": -5.770938660866603,
+   "reason": null,
+   "trunk_deg": 1.771477006090769,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 278,
+   "leg_deg": -6.0405721055114805,
+   "reason": null,
+   "trunk_deg": 1.193492113624476,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 279,
+   "leg_deg": -6.639472057614509,
+   "reason": null,
+   "trunk_deg": 0.5906600651281045,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 280,
+   "leg_deg": -7.236927986059546,
+   "reason": null,
+   "trunk_deg": 0.6030870856138772,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 281,
+   "leg_deg": -7.711893179935981,
+   "reason": null,
+   "trunk_deg": 0.6030770620168259,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 282,
+   "leg_deg": -7.594652314401613,
+   "reason": null,
+   "trunk_deg": -0.0,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 283,
+   "leg_deg": -9.078758183489548,
+   "reason": null,
+   "trunk_deg": 1.2188849389752294,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 284,
+   "leg_deg": -9.991041768810767,
+   "reason": null,
+   "trunk_deg": 0.5968036802287159,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 285,
+   "leg_deg": -10.565872952419358,
+   "reason": null,
+   "trunk_deg": 0.5906393728136509,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 286,
+   "leg_deg": -11.195111211026868,
+   "reason": null,
+   "trunk_deg": 1.7357083718113266,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 287,
+   "leg_deg": -10.784305426430933,
+   "reason": null,
+   "trunk_deg": 1.134428130196513,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 288,
+   "leg_deg": -11.780517578095234,
+   "reason": null,
+   "trunk_deg": 2.8340935641394216,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 289,
+   "leg_deg": -12.200466696524911,
+   "reason": null,
+   "trunk_deg": 3.3664690261201593,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 290,
+   "leg_deg": -12.724352926729347,
+   "reason": null,
+   "trunk_deg": 3.9259007066629157,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 291,
+   "leg_deg": -12.724352570556508,
+   "reason": null,
+   "trunk_deg": 3.366467895645436,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 292,
+   "leg_deg": -13.888006975444894,
+   "reason": null,
+   "trunk_deg": 3.8879107469624166,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 293,
+   "leg_deg": -14.184294005666903,
+   "reason": null,
+   "trunk_deg": 3.8879039457510154,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 294,
+   "leg_deg": -14.620872560528012,
+   "reason": null,
+   "trunk_deg": 3.9259058510976796,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 295,
+   "leg_deg": -13.392494660375705,
+   "reason": null,
+   "trunk_deg": 3.9646363699324656,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 296,
+   "leg_deg": -12.65851277505846,
+   "reason": null,
+   "trunk_deg": 3.9259124521411786,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 297,
+   "leg_deg": -12.366493672613574,
+   "reason": null,
+   "trunk_deg": 3.399710357438732,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 298,
+   "leg_deg": -11.134000214521496,
+   "reason": null,
+   "trunk_deg": 2.8341019001235606,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 299,
+   "leg_deg": -10.546030917957564,
+   "reason": null,
+   "trunk_deg": 2.2025861049785918,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 300,
+   "leg_deg": -10.19810774755885,
+   "reason": null,
+   "trunk_deg": 2.202602178397168,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 301,
+   "leg_deg": -10.251203396664799,
+   "reason": null,
+   "trunk_deg": 3.3018724857722703,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 302,
+   "leg_deg": -10.30484341492951,
+   "reason": null,
+   "trunk_deg": 3.3338437525118363,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 303,
+   "leg_deg": -10.167774807661177,
+   "reason": null,
+   "trunk_deg": 2.7524788269243645,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 304,
+   "leg_deg": -10.167778638607357,
+   "reason": null,
+   "trunk_deg": 2.7791662549351215,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 305,
+   "leg_deg": -10.113954477560707,
+   "reason": null,
+   "trunk_deg": 2.2025981617658053,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 306,
+   "leg_deg": -10.198092582193954,
+   "reason": null,
+   "trunk_deg": 2.223964518158923,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 307,
+   "leg_deg": -10.896880907026377,
+   "reason": null,
+   "trunk_deg": 2.2239565262301495,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 308,
+   "leg_deg": -11.368216234368894,
+   "reason": null,
+   "trunk_deg": 2.779178336013708,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 309,
+   "leg_deg": -10.60115365474664,
+   "reason": null,
+   "trunk_deg": 2.2025941223355012,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 310,
+   "leg_deg": -11.129190797297793,
+   "reason": null,
+   "trunk_deg": 3.301859230783379,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 311,
+   "leg_deg": -11.607418868597646,
+   "reason": null,
+   "trunk_deg": 3.3338488098964034,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 312,
+   "leg_deg": -12.302727273870206,
+   "reason": null,
+   "trunk_deg": 4.484595524337777,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 313,
+   "leg_deg": -12.13682000561055,
+   "reason": null,
+   "trunk_deg": 4.9937405246063395,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 314,
+   "leg_deg": -12.496001538777659,
+   "reason": null,
+   "trunk_deg": 4.528808651043135,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 315,
+   "leg_deg": -11.780519459563676,
+   "reason": null,
+   "trunk_deg": 5.092106938808398,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 316,
+   "leg_deg": -11.019682723205426,
+   "reason": null,
+   "trunk_deg": 5.142755960331287,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 317,
+   "leg_deg": -9.955814059188862,
+   "reason": null,
+   "trunk_deg": 5.7678928188246825,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 318,
+   "leg_deg": -8.7233858539549,
+   "reason": null,
+   "trunk_deg": 5.247136690725234,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 319,
+   "leg_deg": -7.957520525158239,
+   "reason": null,
+   "trunk_deg": 5.300926516525688,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 320,
+   "leg_deg": -7.275010504098462,
+   "reason": null,
+   "trunk_deg": 5.247150304514111,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 321,
+   "leg_deg": -6.938389767551486,
+   "reason": null,
+   "trunk_deg": 5.826352345506859,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 322,
+   "leg_deg": -6.104690537887835,
+   "reason": null,
+   "trunk_deg": 5.826345169356166,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 323,
+   "leg_deg": -5.52753864850259,
+   "reason": null,
+   "trunk_deg": 5.767892653141548,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 324,
+   "leg_deg": -4.916576964102484,
+   "reason": null,
+   "trunk_deg": 5.19444689866191,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 325,
+   "leg_deg": -5.770936589767575,
+   "reason": null,
+   "trunk_deg": 5.194416934746955,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 326,
+   "leg_deg": -6.009012592271855,
+   "reason": null,
+   "trunk_deg": 5.8263383996461435,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 327,
+   "leg_deg": -6.604829366206981,
+   "reason": null,
+   "trunk_deg": 4.044478430796086,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 328,
+   "leg_deg": -7.199228150830568,
+   "reason": null,
+   "trunk_deg": 3.5395450399393127,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 329,
+   "leg_deg": -7.535064437295102,
+   "reason": null,
+   "trunk_deg": 2.981471048406616,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 330,
+   "leg_deg": -7.751776956295767,
+   "reason": null,
+   "trunk_deg": 1.2060659179166013,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 331,
+   "leg_deg": -8.212787694353926,
+   "reason": null,
+   "trunk_deg": -0.0,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 332,
+   "leg_deg": -8.790543294096286,
+   "reason": null,
+   "trunk_deg": -0.5967999132305836,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 333,
+   "leg_deg": -9.366512173804203,
+   "reason": null,
+   "trunk_deg": -1.1811834505942853,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 334,
+   "leg_deg": -9.752433849523834,
+   "reason": null,
+   "trunk_deg": -1.7357039386863566,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 335,
+   "leg_deg": -10.5460440694894,
+   "reason": null,
+   "trunk_deg": -0.5846311770642667,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 336,
+   "leg_deg": -11.192037676698533,
+   "reason": null,
+   "trunk_deg": -0.57295018014076,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 337,
+   "leg_deg": -12.200463405911542,
+   "reason": null,
+   "trunk_deg": -0.5672713929757571,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 338,
+   "leg_deg": -12.752124875136237,
+   "reason": null,
+   "trunk_deg": -0.5509015819322535,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 339,
+   "leg_deg": -12.75212192732788,
+   "reason": null,
+   "trunk_deg": -1.0912124797023763,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 340,
+   "leg_deg": -12.883276395737687,
+   "reason": null,
+   "trunk_deg": -0.5509173150589566,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 341,
+   "leg_deg": -14.109882668774901,
+   "reason": null,
+   "trunk_deg": -0.0,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 342,
+   "leg_deg": -13.815028529819566,
+   "reason": null,
+   "trunk_deg": 0.5509103424636369,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 343,
+   "leg_deg": -13.74279556639605,
+   "reason": null,
+   "trunk_deg": 0.5562400506219297,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 344,
+   "leg_deg": -13.153703518710183,
+   "reason": null,
+   "trunk_deg": -0.0,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 345,
+   "leg_deg": -12.329753201661532,
+   "reason": null,
+   "trunk_deg": -0.0,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 346,
+   "leg_deg": -11.607418206968783,
+   "reason": null,
+   "trunk_deg": -0.0,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 347,
+   "leg_deg": -11.49143857369464,
+   "reason": null,
+   "trunk_deg": -0.5617181224575281,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 348,
+   "leg_deg": -11.070207887444814,
+   "reason": null,
+   "trunk_deg": -0.5562346361497851,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 349,
+   "leg_deg": -10.713119251083224,
+   "reason": null,
+   "trunk_deg": -1.1017048794661988,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 350,
+   "leg_deg": -10.713131530035882,
+   "reason": null,
+   "trunk_deg": -2.2239505174793246,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 351,
+   "leg_deg": -10.5251145829645,
+   "reason": null,
+   "trunk_deg": -2.22396355521344,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 352,
+   "leg_deg": -10.413828716970311,
+   "reason": null,
+   "trunk_deg": -2.1816418114643725,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 353,
+   "leg_deg": -11.01183061793851,
+   "reason": null,
+   "trunk_deg": -2.1610895517183546,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 354,
+   "leg_deg": -11.668774509817034,
+   "reason": null,
+   "trunk_deg": -1.6522959558544428,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 355,
+   "leg_deg": -11.61566146721449,
+   "reason": null,
+   "trunk_deg": -2.20260887502643,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 356,
+   "leg_deg": -11.793429296618953,
+   "reason": null,
+   "trunk_deg": -2.7263221286781234,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 357,
+   "leg_deg": -11.73077301580399,
+   "reason": null,
+   "trunk_deg": -3.2704982874477477,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 358,
+   "leg_deg": -11.967104268217957,
+   "reason": null,
+   "trunk_deg": -2.7524870463724227,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 359,
+   "leg_deg": -11.793430982494177,
+   "reason": null,
+   "trunk_deg": -2.2025824261202627,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 360,
+   "leg_deg": -11.678789265185218,
+   "reason": null,
+   "trunk_deg": -3.742993405192319,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 361,
+   "leg_deg": -12.291347817851914,
+   "reason": null,
+   "trunk_deg": -1.6211312067304893,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 362,
+   "leg_deg": -12.52880638435461,
+   "reason": null,
+   "trunk_deg": -1.6211401055168684,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 363,
+   "leg_deg": -13.063953222603201,
+   "reason": null,
+   "trunk_deg": -0.5405169382919858,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 364,
+   "leg_deg": -14.774544647385952,
+   "reason": null,
+   "trunk_deg": -0.0,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 365,
+   "leg_deg": -12.926005682724083,
+   "reason": null,
+   "trunk_deg": -1.6211365150955312,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 366,
+   "leg_deg": -12.62822742221824,
+   "reason": null,
+   "trunk_deg": -1.1016898486255953,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 367,
+   "leg_deg": -11.793433817317775,
+   "reason": null,
+   "trunk_deg": -1.1123930903267127,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 368,
+   "leg_deg": -10.954061203592339,
+   "reason": null,
+   "trunk_deg": -0.567282872504119,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 369,
+   "leg_deg": -9.563278078202298,
+   "reason": null,
+   "trunk_deg": -0.5617049186952109,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 370,
+   "leg_deg": -8.13009570729029,
+   "reason": null,
+   "trunk_deg": -0.556252634287374,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 371,
+   "leg_deg": -6.137259811878273,
+   "reason": null,
+   "trunk_deg": -0.5508969246663795,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 372,
+   "leg_deg": -5.80158676323036,
+   "reason": null,
+   "trunk_deg": 0.5616973059305839,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 373,
+   "leg_deg": -5.250265204961177,
+   "reason": null,
+   "trunk_deg": 0.5616943331955218,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 374,
+   "leg_deg": -5.278648920667366,
+   "reason": null,
+   "trunk_deg": 0.5617170529813638,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 375,
+   "leg_deg": -5.832573696176578,
+   "reason": null,
+   "trunk_deg": -0.5616856164484116,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 376,
+   "leg_deg": -6.407442544498726,
+   "reason": null,
+   "trunk_deg": -0.5729358056094829,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 377,
+   "leg_deg": -6.781712735863769,
+   "reason": null,
+   "trunk_deg": -1.1573362123547504,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 378,
+   "leg_deg": -7.61472196257655,
+   "reason": null,
+   "trunk_deg": -1.735698491636806,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 379,
+   "leg_deg": -8.723383723106252,
+   "reason": null,
+   "trunk_deg": -1.735693104421586,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 380,
+   "leg_deg": -9.8025008451592,
+   "reason": null,
+   "trunk_deg": -1.7183557870659518,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 381,
+   "leg_deg": -10.54602624599484,
+   "reason": null,
+   "trunk_deg": -2.8063849332182897,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 382,
+   "leg_deg": -10.673984712831155,
+   "reason": null,
+   "trunk_deg": -2.290603017066043,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 383,
+   "leg_deg": -10.384021388575121,
+   "reason": null,
+   "trunk_deg": -2.806374053238059,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 384,
+   "leg_deg": -10.728857646951635,
+   "reason": null,
+   "trunk_deg": -2.2457446821201197,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 385,
+   "leg_deg": -11.486584195568435,
+   "reason": null,
+   "trunk_deg": -1.668334948752993,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 386,
+   "leg_deg": -11.780523837950376,
+   "reason": null,
+   "trunk_deg": -1.6683246533083829,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 387,
+   "leg_deg": -12.464937642073531,
+   "reason": null,
+   "trunk_deg": -1.6846779323181251,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 388,
+   "leg_deg": -13.017109954892923,
+   "reason": null,
+   "trunk_deg": -2.245734962806984,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 389,
+   "leg_deg": -12.994619389933122,
+   "reason": null,
+   "trunk_deg": -1.7183569235827414,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 390,
+   "leg_deg": -13.085054252444804,
+   "reason": null,
+   "trunk_deg": -2.834119458643394,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 391,
+   "leg_deg": -13.963345666992547,
+   "reason": null,
+   "trunk_deg": -1.1573277602800651,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 392,
+   "leg_deg": -13.600549444842509,
+   "reason": null,
+   "trunk_deg": -0.584617651808668,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 393,
+   "leg_deg": -13.891184519965492,
+   "reason": null,
+   "trunk_deg": -0.5906729699999143,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 394,
+   "leg_deg": -14.403999181828395,
+   "reason": null,
+   "trunk_deg": -1.7533890273630703,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 395,
+   "leg_deg": -12.949845516644562,
+   "reason": null,
+   "trunk_deg": -2.2906268360219326,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 396,
+   "leg_deg": -12.6282168687539,
+   "reason": null,
+   "trunk_deg": -2.2906249251423807,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 397,
+   "leg_deg": -10.954066717690893,
+   "reason": null,
+   "trunk_deg": -3.3997176221275467,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 398,
+   "leg_deg": -10.413825662330007,
+   "reason": null,
+   "trunk_deg": -2.8063706845450547,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 399,
+   "leg_deg": -10.72885991493574,
+   "reason": null,
+   "trunk_deg": -1.6365751598425666,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 400,
+   "leg_deg": -9.853076816520385,
+   "reason": null,
+   "trunk_deg": -1.6523051008587177,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 401,
+   "leg_deg": -9.462322208025617,
+   "reason": null,
+   "trunk_deg": -1.1232987961898175,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 402,
+   "leg_deg": -10.1455483460574,
+   "reason": null,
+   "trunk_deg": 0.561710147758188,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 403,
+   "leg_deg": -10.784293440448913,
+   "reason": null,
+   "trunk_deg": 1.123285219144863,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 404,
+   "leg_deg": -11.1340024875097,
+   "reason": null,
+   "trunk_deg": 1.1344076180245302,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 405,
+   "leg_deg": -11.250686746886267,
+   "reason": null,
+   "trunk_deg": 0.5509201824478638,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 406,
+   "leg_deg": -11.546698274566381,
+   "reason": null,
+   "trunk_deg": 0.5456700174109778,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 407,
+   "leg_deg": -12.07382390748336,
+   "reason": null,
+   "trunk_deg": 1.6683241687691863,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 408,
+   "leg_deg": -12.13682282421141,
+   "reason": null,
+   "trunk_deg": 1.6683494241862358,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 409,
+   "leg_deg": -12.561773565980808,
+   "reason": null,
+   "trunk_deg": 2.2239616691564246,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 410,
+   "leg_deg": -12.925992011593388,
+   "reason": null,
+   "trunk_deg": 2.752489151173442,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 411,
+   "leg_deg": -12.32974919162918,
+   "reason": null,
+   "trunk_deg": 2.8063730226291677,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 412,
+   "leg_deg": -12.159595534504813,
+   "reason": null,
+   "trunk_deg": 2.267946723691995,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 413,
+   "leg_deg": -11.607415235866707,
+   "reason": null,
+   "trunk_deg": 2.806366382735815,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 414,
+   "leg_deg": -10.060688283878974,
+   "reason": null,
+   "trunk_deg": 2.245737389705918,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 415,
+   "leg_deg": -9.114176949196324,
+   "reason": null,
+   "trunk_deg": 2.752486444920599,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 416,
+   "leg_deg": -8.259448219232274,
+   "reason": null,
+   "trunk_deg": 2.7524923249887765,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 417,
+   "leg_deg": -7.275000852679395,
+   "reason": null,
+   "trunk_deg": 2.7524817872412477,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 418,
+   "leg_deg": -6.072454334713943,
+   "reason": null,
+   "trunk_deg": 2.7524779264088166,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 419,
+   "leg_deg": -5.440333195926029,
+   "reason": null,
+   "trunk_deg": 2.7524806663357118,
+   "warnings": []
+  },
+  {
+   "facing": -1.0,
+   "facing_source": "laba",
+   "frame": 420,
+   "leg_deg": -4.78846333183276,
+   "reason": null,
+   "trunk_deg": 3.2397036527331755,
+   "warnings": []
+  }
+ ],
+ "json": {
+  "candidate": "urmarire_aspect_k1@1",
+  "fallback_reason": null,
+  "fps": 30.02689643276211,
+  "frames": [
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 150,
+    "leg_deg": -27.44453606249159,
+    "reason": null,
+    "trunk_deg": -2.579147139600355,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 151,
+    "leg_deg": -27.307505160786437,
+    "reason": null,
+    "trunk_deg": -2.5791660133539747,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 152,
+    "leg_deg": -27.681047579731676,
+    "reason": null,
+    "trunk_deg": -3.64121536680985,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 153,
+    "leg_deg": -28.072489397233852,
+    "reason": null,
+    "trunk_deg": -3.641192986662621,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 154,
+    "leg_deg": -28.07249060623665,
+    "reason": null,
+    "trunk_deg": -4.720121501432959,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 155,
+    "leg_deg": -28.22348298777044,
+    "reason": null,
+    "trunk_deg": -4.635458823732783,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 156,
+    "leg_deg": -28.339127831892608,
+    "reason": null,
+    "trunk_deg": -4.12231030668605,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 157,
+    "leg_deg": -29.327188940230336,
+    "reason": null,
+    "trunk_deg": -3.039388289616311,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 158,
+    "leg_deg": -29.054606169196024,
+    "reason": null,
+    "trunk_deg": -1.9749431321892346,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 159,
+    "leg_deg": -28.544244040747902,
+    "reason": null,
+    "trunk_deg": -2.935668645697751,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 160,
+    "leg_deg": -30.25644018920599,
+    "reason": null,
+    "trunk_deg": -2.9866254311349913,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 161,
+    "leg_deg": -30.774027575089516,
+    "reason": null,
+    "trunk_deg": -3.5137759752567836,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 162,
+    "leg_deg": -29.77914618545806,
+    "reason": null,
+    "trunk_deg": -3.544771520069225,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 163,
+    "leg_deg": -32.17864484117131,
+    "reason": null,
+    "trunk_deg": -2.556182942261487,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 164,
+    "leg_deg": -32.98851861253906,
+    "reason": null,
+    "trunk_deg": -3.012774406789958,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 165,
+    "leg_deg": -29.571256382399422,
+    "reason": null,
+    "trunk_deg": -1.9920925861786238,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 166,
+    "leg_deg": -30.465540479499843,
+    "reason": null,
+    "trunk_deg": -1.4943547988413284,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 167,
+    "leg_deg": -29.744874700916995,
+    "reason": null,
+    "trunk_deg": -0.49822247216591403,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 168,
+    "leg_deg": -28.700083401590504,
+    "reason": null,
+    "trunk_deg": -0.507014675418617,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 169,
+    "leg_deg": -21.20515275201825,
+    "reason": null,
+    "trunk_deg": 6.581933119015919,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 170,
+    "leg_deg": -20.790738198691237,
+    "reason": null,
+    "trunk_deg": 6.645279387963017,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 171,
+    "leg_deg": -21.037510249929237,
+    "reason": null,
+    "trunk_deg": 7.193475331637819,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 172,
+    "leg_deg": -19.55459093578075,
+    "reason": null,
+    "trunk_deg": 6.037683676303129,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 173,
+    "leg_deg": -18.152702828318812,
+    "reason": null,
+    "trunk_deg": 4.9459790768533365,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 174,
+    "leg_deg": -17.354012715470272,
+    "reason": null,
+    "trunk_deg": 5.092094020731308,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 175,
+    "leg_deg": -15.814073286650494,
+    "reason": null,
+    "trunk_deg": 5.7105606891840734,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 176,
+    "leg_deg": -14.42078910046853,
+    "reason": null,
+    "trunk_deg": 5.19444380874554,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 177,
+    "leg_deg": -14.34223472211005,
+    "reason": null,
+    "trunk_deg": 5.767886414742718,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 178,
+    "leg_deg": -15.033249101360134,
+    "reason": null,
+    "trunk_deg": 5.7105849279478615,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 179,
+    "leg_deg": -15.255113728712312,
+    "reason": null,
+    "trunk_deg": 6.404326979476938,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 180,
+    "leg_deg": -16.389543631765058,
+    "reason": null,
+    "trunk_deg": 6.215656565311931,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 181,
+    "leg_deg": -16.20904305697695,
+    "reason": null,
+    "trunk_deg": 4.528859044812719,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 182,
+    "leg_deg": -17.032880643435472,
+    "reason": null,
+    "trunk_deg": 5.194447728235011,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 183,
+    "leg_deg": -17.056968746826673,
+    "reason": null,
+    "trunk_deg": 4.127594105631074,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 184,
+    "leg_deg": -16.849293616915265,
+    "reason": null,
+    "trunk_deg": 3.4336051623926163,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 185,
+    "leg_deg": -16.581048815976324,
+    "reason": null,
+    "trunk_deg": 3.433643257514381,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 186,
+    "leg_deg": -16.87626279747396,
+    "reason": null,
+    "trunk_deg": 3.3997211278019974,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 187,
+    "leg_deg": -17.35402327724624,
+    "reason": null,
+    "trunk_deg": 2.779182270123918,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 188,
+    "leg_deg": -17.94524158941607,
+    "reason": null,
+    "trunk_deg": 3.3664582533157166,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 189,
+    "leg_deg": -17.744665540365155,
+    "reason": null,
+    "trunk_deg": 2.7006016018309933,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 190,
+    "leg_deg": -17.840213167412585,
+    "reason": null,
+    "trunk_deg": 2.161073559603082,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 191,
+    "leg_deg": -18.2360167467077,
+    "reason": null,
+    "trunk_deg": 2.1816395378481053,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 192,
+    "leg_deg": -27.64597180199921,
+    "reason": null,
+    "trunk_deg": -4.1976542807617605,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 193,
+    "leg_deg": -19.44003853087482,
+    "reason": null,
+    "trunk_deg": 3.3997123958485536,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 194,
+    "leg_deg": -20.037196279666663,
+    "reason": null,
+    "trunk_deg": 3.2704673645216324,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 195,
+    "leg_deg": -21.28264260187919,
+    "reason": null,
+    "trunk_deg": 3.7781969643279827,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 196,
+    "leg_deg": -22.029447925194745,
+    "reason": null,
+    "trunk_deg": 3.742986649579945,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 197,
+    "leg_deg": -22.249022722483684,
+    "reason": null,
+    "trunk_deg": 3.7781969583847523,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 198,
+    "leg_deg": -21.969599400642437,
+    "reason": null,
+    "trunk_deg": 3.23970029610213,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 199,
+    "leg_deg": -28.089181350645262,
+    "reason": null,
+    "trunk_deg": -5.10216525235819,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 200,
+    "leg_deg": -28.61045966596522,
+    "reason": null,
+    "trunk_deg": -4.969742299815925,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 201,
+    "leg_deg": -28.300756449157884,
+    "reason": null,
+    "trunk_deg": -4.553760839930471,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 202,
+    "leg_deg": -28.072483342001426,
+    "reason": null,
+    "trunk_deg": -4.594269126560522,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 203,
+    "leg_deg": -28.31972480816434,
+    "reason": null,
+    "trunk_deg": -5.102180879926136,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 204,
+    "leg_deg": -28.205227736599237,
+    "reason": null,
+    "trunk_deg": -5.1478795723843715,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 205,
+    "leg_deg": -19.65382123013676,
+    "reason": null,
+    "trunk_deg": 2.223959328713706,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 206,
+    "leg_deg": -19.83213875813952,
+    "reason": null,
+    "trunk_deg": 2.7524818194284077,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 207,
+    "leg_deg": -28.972073482383593,
+    "reason": null,
+    "trunk_deg": -5.1478991974723325,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 208,
+    "leg_deg": -20.556047648186116,
+    "reason": null,
+    "trunk_deg": 4.945971224566339,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 209,
+    "leg_deg": -20.384290357036118,
+    "reason": null,
+    "trunk_deg": 4.398705354995532,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 210,
+    "leg_deg": -28.07247052387851,
+    "reason": null,
+    "trunk_deg": -5.609292262024754,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 211,
+    "leg_deg": -27.201629909257907,
+    "reason": null,
+    "trunk_deg": -5.013138405115282,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 212,
+    "leg_deg": -28.886576278900513,
+    "reason": null,
+    "trunk_deg": -4.635472650144755,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 213,
+    "leg_deg": -19.19129109157023,
+    "reason": null,
+    "trunk_deg": 3.8506434360659765,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 214,
+    "leg_deg": -18.624661640007606,
+    "reason": null,
+    "trunk_deg": 3.778190880029417,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 215,
+    "leg_deg": -18.34148669040464,
+    "reason": null,
+    "trunk_deg": 3.778201122411589,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 216,
+    "leg_deg": -18.529346926284706,
+    "reason": null,
+    "trunk_deg": 4.945975802067757,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 217,
+    "leg_deg": -18.06047665531238,
+    "reason": null,
+    "trunk_deg": 4.9459689433715734,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 218,
+    "leg_deg": -18.245848651449094,
+    "reason": null,
+    "trunk_deg": 5.3893075296968975,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 219,
+    "leg_deg": -17.869540972789526,
+    "reason": null,
+    "trunk_deg": 5.545307451612519,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 220,
+    "leg_deg": -17.66334117919506,
+    "reason": null,
+    "trunk_deg": 3.8140910390503633,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 221,
+    "leg_deg": -16.876261205031764,
+    "reason": null,
+    "trunk_deg": 4.398698121897326,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 222,
+    "leg_deg": -16.073575732430985,
+    "reason": null,
+    "trunk_deg": 3.9259026150476513,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 223,
+    "leg_deg": -14.64737503302195,
+    "reason": null,
+    "trunk_deg": 3.333861078061331,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 224,
+    "leg_deg": -13.276398938158268,
+    "reason": null,
+    "trunk_deg": 3.8879236914246955,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 225,
+    "leg_deg": -12.925999294466628,
+    "reason": null,
+    "trunk_deg": 5.042460201570417,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 226,
+    "leg_deg": -13.063955293854079,
+    "reason": null,
+    "trunk_deg": 5.545320317344969,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 227,
+    "leg_deg": -11.668773770610581,
+    "reason": null,
+    "trunk_deg": 4.89908916753564,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 228,
+    "leg_deg": -11.920728469287544,
+    "reason": null,
+    "trunk_deg": 3.8506377035683492,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 229,
+    "leg_deg": -11.92074504385498,
+    "reason": null,
+    "trunk_deg": 3.9259151129734087,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 230,
+    "leg_deg": -12.264777873938693,
+    "reason": null,
+    "trunk_deg": 4.619908994208848,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 231,
+    "leg_deg": -12.200462149646954,
+    "reason": null,
+    "trunk_deg": 4.619931997974569,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 232,
+    "leg_deg": -13.017118509557669,
+    "reason": null,
+    "trunk_deg": 4.5739327041494855,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 233,
+    "leg_deg": -13.378538048843485,
+    "reason": null,
+    "trunk_deg": 3.4682255217513434,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 234,
+    "leg_deg": -13.963349892906939,
+    "reason": null,
+    "trunk_deg": 2.920713965731359,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 235,
+    "leg_deg": -14.109883545566825,
+    "reason": null,
+    "trunk_deg": 1.735712559480286,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 236,
+    "leg_deg": -14.697320613743742,
+    "reason": null,
+    "trunk_deg": 2.36138246975162,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 237,
+    "leg_deg": -14.912032103962344,
+    "reason": null,
+    "trunk_deg": 2.3372867921020446,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 238,
+    "leg_deg": -15.281613324317938,
+    "reason": null,
+    "trunk_deg": 2.313743604057381,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 239,
+    "leg_deg": -15.57254107732782,
+    "reason": null,
+    "trunk_deg": 4.004165701930894,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 240,
+    "leg_deg": -16.493466305013555,
+    "reason": null,
+    "trunk_deg": 4.619925727980625,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 241,
+    "leg_deg": -16.99082558618024,
+    "reason": null,
+    "trunk_deg": 6.215629600780959,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 242,
+    "leg_deg": -18.62786538630882,
+    "reason": null,
+    "trunk_deg": 7.891706967414228,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 243,
+    "leg_deg": -19.19127820062407,
+    "reason": null,
+    "trunk_deg": 7.740339236860408,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 244,
+    "leg_deg": -19.592284715246095,
+    "reason": null,
+    "trunk_deg": 7.740334815872345,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 245,
+    "leg_deg": -19.304456301827425,
+    "reason": null,
+    "trunk_deg": 7.193461238296118,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 246,
+    "leg_deg": -18.33832812999693,
+    "reason": null,
+    "trunk_deg": 7.193450844648821,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 247,
+    "leg_deg": -17.663343859447277,
+    "reason": null,
+    "trunk_deg": 8.365892489966672,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 248,
+    "leg_deg": -16.198727041421662,
+    "reason": null,
+    "trunk_deg": 8.285805339674189,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 249,
+    "leg_deg": -14.259471937865882,
+    "reason": null,
+    "trunk_deg": 7.6668027619534715,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 250,
+    "leg_deg": -14.03624897452068,
+    "reason": null,
+    "trunk_deg": 7.740342683661704,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 251,
+    "leg_deg": -13.663230466584265,
+    "reason": null,
+    "trunk_deg": 7.969624113610076,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 252,
+    "leg_deg": -13.293146181716788,
+    "reason": null,
+    "trunk_deg": 7.815291585039017,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 253,
+    "leg_deg": -12.665071282716546,
+    "reason": null,
+    "trunk_deg": 7.8917052359806785,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 254,
+    "leg_deg": -12.665064387896596,
+    "reason": null,
+    "trunk_deg": 7.891707811895977,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 255,
+    "leg_deg": -12.804264541711866,
+    "reason": null,
+    "trunk_deg": 7.263250217173352,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 256,
+    "leg_deg": -13.1857583528356,
+    "reason": null,
+    "trunk_deg": 7.193464674185548,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 257,
+    "leg_deg": -13.04188971239163,
+    "reason": null,
+    "trunk_deg": 7.740349195864443,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 258,
+    "leg_deg": -12.901068955444805,
+    "reason": null,
+    "trunk_deg": 7.3343784038724005,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 259,
+    "leg_deg": -12.831775360296007,
+    "reason": null,
+    "trunk_deg": 8.447518960371836,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 260,
+    "leg_deg": -13.276399152213274,
+    "reason": null,
+    "trunk_deg": 8.28579204271946,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 261,
+    "leg_deg": -13.50783942268622,
+    "reason": null,
+    "trunk_deg": 8.530763593992,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 262,
+    "leg_deg": -12.971101834175194,
+    "reason": null,
+    "trunk_deg": 7.969624861859062,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 263,
+    "leg_deg": -13.258867802279804,
+    "reason": null,
+    "trunk_deg": 7.3343940852915965,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 264,
+    "leg_deg": -13.877530735755505,
+    "reason": null,
+    "trunk_deg": 7.480904412879706,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 265,
+    "leg_deg": -13.881178558866416,
+    "reason": null,
+    "trunk_deg": 6.981055315167119,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 266,
+    "leg_deg": -14.191094259529445,
+    "reason": null,
+    "trunk_deg": 6.277303954656859,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 267,
+    "leg_deg": -14.264523404341881,
+    "reason": null,
+    "trunk_deg": 6.277315773378294,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 268,
+    "leg_deg": -12.994609304197615,
+    "reason": null,
+    "trunk_deg": 3.9258975882496085,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 269,
+    "leg_deg": -12.329752138437248,
+    "reason": null,
+    "trunk_deg": 3.8879193724349177,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 270,
+    "leg_deg": -11.430303000658052,
+    "reason": null,
+    "trunk_deg": 2.7791798496455966,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 271,
+    "leg_deg": -10.469176131543316,
+    "reason": null,
+    "trunk_deg": 2.806375952813618,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 272,
+    "leg_deg": -9.309939819106013,
+    "reason": null,
+    "trunk_deg": 3.468217439823436,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 273,
+    "leg_deg": -8.65254465100484,
+    "reason": null,
+    "trunk_deg": 2.834120300364884,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 274,
+    "leg_deg": -7.049169181371923,
+    "reason": null,
+    "trunk_deg": 2.9207127938848885,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 275,
+    "leg_deg": -6.237077955047221,
+    "reason": null,
+    "trunk_deg": 1.7356995636745614,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 276,
+    "leg_deg": -6.237073778405416,
+    "reason": null,
+    "trunk_deg": 1.7183592438464383,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 277,
+    "leg_deg": -5.770938660866603,
+    "reason": null,
+    "trunk_deg": 1.771477006090769,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 278,
+    "leg_deg": -6.0405721055114805,
+    "reason": null,
+    "trunk_deg": 1.193492113624476,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 279,
+    "leg_deg": -6.639472057614509,
+    "reason": null,
+    "trunk_deg": 0.5906600651281045,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 280,
+    "leg_deg": -7.236927986059546,
+    "reason": null,
+    "trunk_deg": 0.6030870856138772,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 281,
+    "leg_deg": -7.711893179935981,
+    "reason": null,
+    "trunk_deg": 0.6030770620168259,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 282,
+    "leg_deg": -7.594652314401613,
+    "reason": null,
+    "trunk_deg": -0.0,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 283,
+    "leg_deg": -9.078758183489548,
+    "reason": null,
+    "trunk_deg": 1.2188849389752294,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 284,
+    "leg_deg": -9.991041768810767,
+    "reason": null,
+    "trunk_deg": 0.5968036802287159,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 285,
+    "leg_deg": -10.565872952419358,
+    "reason": null,
+    "trunk_deg": 0.5906393728136509,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 286,
+    "leg_deg": -11.195111211026868,
+    "reason": null,
+    "trunk_deg": 1.7357083718113266,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 287,
+    "leg_deg": -10.784305426430933,
+    "reason": null,
+    "trunk_deg": 1.134428130196513,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 288,
+    "leg_deg": -11.780517578095234,
+    "reason": null,
+    "trunk_deg": 2.8340935641394216,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 289,
+    "leg_deg": -12.200466696524911,
+    "reason": null,
+    "trunk_deg": 3.3664690261201593,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 290,
+    "leg_deg": -12.724352926729347,
+    "reason": null,
+    "trunk_deg": 3.9259007066629157,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 291,
+    "leg_deg": -12.724352570556508,
+    "reason": null,
+    "trunk_deg": 3.366467895645436,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 292,
+    "leg_deg": -13.888006975444894,
+    "reason": null,
+    "trunk_deg": 3.8879107469624166,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 293,
+    "leg_deg": -14.184294005666903,
+    "reason": null,
+    "trunk_deg": 3.8879039457510154,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 294,
+    "leg_deg": -14.620872560528012,
+    "reason": null,
+    "trunk_deg": 3.9259058510976796,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 295,
+    "leg_deg": -13.392494660375705,
+    "reason": null,
+    "trunk_deg": 3.9646363699324656,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 296,
+    "leg_deg": -12.65851277505846,
+    "reason": null,
+    "trunk_deg": 3.9259124521411786,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 297,
+    "leg_deg": -12.366493672613574,
+    "reason": null,
+    "trunk_deg": 3.399710357438732,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 298,
+    "leg_deg": -11.134000214521496,
+    "reason": null,
+    "trunk_deg": 2.8341019001235606,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 299,
+    "leg_deg": -10.546030917957564,
+    "reason": null,
+    "trunk_deg": 2.2025861049785918,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 300,
+    "leg_deg": -10.19810774755885,
+    "reason": null,
+    "trunk_deg": 2.202602178397168,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 301,
+    "leg_deg": -10.251203396664799,
+    "reason": null,
+    "trunk_deg": 3.3018724857722703,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 302,
+    "leg_deg": -10.30484341492951,
+    "reason": null,
+    "trunk_deg": 3.3338437525118363,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 303,
+    "leg_deg": -10.167774807661177,
+    "reason": null,
+    "trunk_deg": 2.7524788269243645,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 304,
+    "leg_deg": -10.167778638607357,
+    "reason": null,
+    "trunk_deg": 2.7791662549351215,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 305,
+    "leg_deg": -10.113954477560707,
+    "reason": null,
+    "trunk_deg": 2.2025981617658053,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 306,
+    "leg_deg": -10.198092582193954,
+    "reason": null,
+    "trunk_deg": 2.223964518158923,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 307,
+    "leg_deg": -10.896880907026377,
+    "reason": null,
+    "trunk_deg": 2.2239565262301495,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 308,
+    "leg_deg": -11.368216234368894,
+    "reason": null,
+    "trunk_deg": 2.779178336013708,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 309,
+    "leg_deg": -10.60115365474664,
+    "reason": null,
+    "trunk_deg": 2.2025941223355012,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 310,
+    "leg_deg": -11.129190797297793,
+    "reason": null,
+    "trunk_deg": 3.301859230783379,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 311,
+    "leg_deg": -11.607418868597646,
+    "reason": null,
+    "trunk_deg": 3.3338488098964034,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 312,
+    "leg_deg": -12.302727273870206,
+    "reason": null,
+    "trunk_deg": 4.484595524337777,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 313,
+    "leg_deg": -12.13682000561055,
+    "reason": null,
+    "trunk_deg": 4.9937405246063395,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 314,
+    "leg_deg": -12.496001538777659,
+    "reason": null,
+    "trunk_deg": 4.528808651043135,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 315,
+    "leg_deg": -11.780519459563676,
+    "reason": null,
+    "trunk_deg": 5.092106938808398,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 316,
+    "leg_deg": -11.019682723205426,
+    "reason": null,
+    "trunk_deg": 5.142755960331287,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 317,
+    "leg_deg": -9.955814059188862,
+    "reason": null,
+    "trunk_deg": 5.7678928188246825,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 318,
+    "leg_deg": -8.7233858539549,
+    "reason": null,
+    "trunk_deg": 5.247136690725234,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 319,
+    "leg_deg": -7.957520525158239,
+    "reason": null,
+    "trunk_deg": 5.300926516525688,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 320,
+    "leg_deg": -7.275010504098462,
+    "reason": null,
+    "trunk_deg": 5.247150304514111,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 321,
+    "leg_deg": -6.938389767551486,
+    "reason": null,
+    "trunk_deg": 5.826352345506859,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 322,
+    "leg_deg": -6.104690537887835,
+    "reason": null,
+    "trunk_deg": 5.826345169356166,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 323,
+    "leg_deg": -5.52753864850259,
+    "reason": null,
+    "trunk_deg": 5.767892653141548,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 324,
+    "leg_deg": -4.916576964102484,
+    "reason": null,
+    "trunk_deg": 5.19444689866191,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 325,
+    "leg_deg": -5.770936589767575,
+    "reason": null,
+    "trunk_deg": 5.194416934746955,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 326,
+    "leg_deg": -6.009012592271855,
+    "reason": null,
+    "trunk_deg": 5.8263383996461435,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 327,
+    "leg_deg": -6.604829366206981,
+    "reason": null,
+    "trunk_deg": 4.044478430796086,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 328,
+    "leg_deg": -7.199228150830568,
+    "reason": null,
+    "trunk_deg": 3.5395450399393127,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 329,
+    "leg_deg": -7.535064437295102,
+    "reason": null,
+    "trunk_deg": 2.981471048406616,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 330,
+    "leg_deg": -7.751776956295767,
+    "reason": null,
+    "trunk_deg": 1.2060659179166013,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 331,
+    "leg_deg": -8.212787694353926,
+    "reason": null,
+    "trunk_deg": -0.0,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 332,
+    "leg_deg": -8.790543294096286,
+    "reason": null,
+    "trunk_deg": -0.5967999132305836,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 333,
+    "leg_deg": -9.366512173804203,
+    "reason": null,
+    "trunk_deg": -1.1811834505942853,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 334,
+    "leg_deg": -9.752433849523834,
+    "reason": null,
+    "trunk_deg": -1.7357039386863566,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 335,
+    "leg_deg": -10.5460440694894,
+    "reason": null,
+    "trunk_deg": -0.5846311770642667,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 336,
+    "leg_deg": -11.192037676698533,
+    "reason": null,
+    "trunk_deg": -0.57295018014076,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 337,
+    "leg_deg": -12.200463405911542,
+    "reason": null,
+    "trunk_deg": -0.5672713929757571,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 338,
+    "leg_deg": -12.752124875136237,
+    "reason": null,
+    "trunk_deg": -0.5509015819322535,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 339,
+    "leg_deg": -12.75212192732788,
+    "reason": null,
+    "trunk_deg": -1.0912124797023763,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 340,
+    "leg_deg": -12.883276395737687,
+    "reason": null,
+    "trunk_deg": -0.5509173150589566,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 341,
+    "leg_deg": -14.109882668774901,
+    "reason": null,
+    "trunk_deg": -0.0,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 342,
+    "leg_deg": -13.815028529819566,
+    "reason": null,
+    "trunk_deg": 0.5509103424636369,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 343,
+    "leg_deg": -13.74279556639605,
+    "reason": null,
+    "trunk_deg": 0.5562400506219297,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 344,
+    "leg_deg": -13.153703518710183,
+    "reason": null,
+    "trunk_deg": -0.0,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 345,
+    "leg_deg": -12.329753201661532,
+    "reason": null,
+    "trunk_deg": -0.0,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 346,
+    "leg_deg": -11.607418206968783,
+    "reason": null,
+    "trunk_deg": -0.0,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 347,
+    "leg_deg": -11.49143857369464,
+    "reason": null,
+    "trunk_deg": -0.5617181224575281,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 348,
+    "leg_deg": -11.070207887444814,
+    "reason": null,
+    "trunk_deg": -0.5562346361497851,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 349,
+    "leg_deg": -10.713119251083224,
+    "reason": null,
+    "trunk_deg": -1.1017048794661988,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 350,
+    "leg_deg": -10.713131530035882,
+    "reason": null,
+    "trunk_deg": -2.2239505174793246,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 351,
+    "leg_deg": -10.5251145829645,
+    "reason": null,
+    "trunk_deg": -2.22396355521344,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 352,
+    "leg_deg": -10.413828716970311,
+    "reason": null,
+    "trunk_deg": -2.1816418114643725,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 353,
+    "leg_deg": -11.01183061793851,
+    "reason": null,
+    "trunk_deg": -2.1610895517183546,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 354,
+    "leg_deg": -11.668774509817034,
+    "reason": null,
+    "trunk_deg": -1.6522959558544428,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 355,
+    "leg_deg": -11.61566146721449,
+    "reason": null,
+    "trunk_deg": -2.20260887502643,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 356,
+    "leg_deg": -11.793429296618953,
+    "reason": null,
+    "trunk_deg": -2.7263221286781234,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 357,
+    "leg_deg": -11.73077301580399,
+    "reason": null,
+    "trunk_deg": -3.2704982874477477,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 358,
+    "leg_deg": -11.967104268217957,
+    "reason": null,
+    "trunk_deg": -2.7524870463724227,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 359,
+    "leg_deg": -11.793430982494177,
+    "reason": null,
+    "trunk_deg": -2.2025824261202627,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 360,
+    "leg_deg": -11.678789265185218,
+    "reason": null,
+    "trunk_deg": -3.742993405192319,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 361,
+    "leg_deg": -12.291347817851914,
+    "reason": null,
+    "trunk_deg": -1.6211312067304893,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 362,
+    "leg_deg": -12.52880638435461,
+    "reason": null,
+    "trunk_deg": -1.6211401055168684,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 363,
+    "leg_deg": -13.063953222603201,
+    "reason": null,
+    "trunk_deg": -0.5405169382919858,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 364,
+    "leg_deg": -14.774544647385952,
+    "reason": null,
+    "trunk_deg": -0.0,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 365,
+    "leg_deg": -12.926005682724083,
+    "reason": null,
+    "trunk_deg": -1.6211365150955312,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 366,
+    "leg_deg": -12.62822742221824,
+    "reason": null,
+    "trunk_deg": -1.1016898486255953,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 367,
+    "leg_deg": -11.793433817317775,
+    "reason": null,
+    "trunk_deg": -1.1123930903267127,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 368,
+    "leg_deg": -10.954061203592339,
+    "reason": null,
+    "trunk_deg": -0.567282872504119,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 369,
+    "leg_deg": -9.563278078202298,
+    "reason": null,
+    "trunk_deg": -0.5617049186952109,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 370,
+    "leg_deg": -8.13009570729029,
+    "reason": null,
+    "trunk_deg": -0.556252634287374,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 371,
+    "leg_deg": -6.137259811878273,
+    "reason": null,
+    "trunk_deg": -0.5508969246663795,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 372,
+    "leg_deg": -5.80158676323036,
+    "reason": null,
+    "trunk_deg": 0.5616973059305839,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 373,
+    "leg_deg": -5.250265204961177,
+    "reason": null,
+    "trunk_deg": 0.5616943331955218,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 374,
+    "leg_deg": -5.278648920667366,
+    "reason": null,
+    "trunk_deg": 0.5617170529813638,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 375,
+    "leg_deg": -5.832573696176578,
+    "reason": null,
+    "trunk_deg": -0.5616856164484116,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 376,
+    "leg_deg": -6.407442544498726,
+    "reason": null,
+    "trunk_deg": -0.5729358056094829,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 377,
+    "leg_deg": -6.781712735863769,
+    "reason": null,
+    "trunk_deg": -1.1573362123547504,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 378,
+    "leg_deg": -7.61472196257655,
+    "reason": null,
+    "trunk_deg": -1.735698491636806,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 379,
+    "leg_deg": -8.723383723106252,
+    "reason": null,
+    "trunk_deg": -1.735693104421586,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 380,
+    "leg_deg": -9.8025008451592,
+    "reason": null,
+    "trunk_deg": -1.7183557870659518,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 381,
+    "leg_deg": -10.54602624599484,
+    "reason": null,
+    "trunk_deg": -2.8063849332182897,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 382,
+    "leg_deg": -10.673984712831155,
+    "reason": null,
+    "trunk_deg": -2.290603017066043,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 383,
+    "leg_deg": -10.384021388575121,
+    "reason": null,
+    "trunk_deg": -2.806374053238059,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 384,
+    "leg_deg": -10.728857646951635,
+    "reason": null,
+    "trunk_deg": -2.2457446821201197,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 385,
+    "leg_deg": -11.486584195568435,
+    "reason": null,
+    "trunk_deg": -1.668334948752993,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 386,
+    "leg_deg": -11.780523837950376,
+    "reason": null,
+    "trunk_deg": -1.6683246533083829,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 387,
+    "leg_deg": -12.464937642073531,
+    "reason": null,
+    "trunk_deg": -1.6846779323181251,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 388,
+    "leg_deg": -13.017109954892923,
+    "reason": null,
+    "trunk_deg": -2.245734962806984,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 389,
+    "leg_deg": -12.994619389933122,
+    "reason": null,
+    "trunk_deg": -1.7183569235827414,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 390,
+    "leg_deg": -13.085054252444804,
+    "reason": null,
+    "trunk_deg": -2.834119458643394,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 391,
+    "leg_deg": -13.963345666992547,
+    "reason": null,
+    "trunk_deg": -1.1573277602800651,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 392,
+    "leg_deg": -13.600549444842509,
+    "reason": null,
+    "trunk_deg": -0.584617651808668,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 393,
+    "leg_deg": -13.891184519965492,
+    "reason": null,
+    "trunk_deg": -0.5906729699999143,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 394,
+    "leg_deg": -14.403999181828395,
+    "reason": null,
+    "trunk_deg": -1.7533890273630703,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 395,
+    "leg_deg": -12.949845516644562,
+    "reason": null,
+    "trunk_deg": -2.2906268360219326,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 396,
+    "leg_deg": -12.6282168687539,
+    "reason": null,
+    "trunk_deg": -2.2906249251423807,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 397,
+    "leg_deg": -10.954066717690893,
+    "reason": null,
+    "trunk_deg": -3.3997176221275467,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 398,
+    "leg_deg": -10.413825662330007,
+    "reason": null,
+    "trunk_deg": -2.8063706845450547,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 399,
+    "leg_deg": -10.72885991493574,
+    "reason": null,
+    "trunk_deg": -1.6365751598425666,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 400,
+    "leg_deg": -9.853076816520385,
+    "reason": null,
+    "trunk_deg": -1.6523051008587177,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 401,
+    "leg_deg": -9.462322208025617,
+    "reason": null,
+    "trunk_deg": -1.1232987961898175,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 402,
+    "leg_deg": -10.1455483460574,
+    "reason": null,
+    "trunk_deg": 0.561710147758188,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 403,
+    "leg_deg": -10.784293440448913,
+    "reason": null,
+    "trunk_deg": 1.123285219144863,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 404,
+    "leg_deg": -11.1340024875097,
+    "reason": null,
+    "trunk_deg": 1.1344076180245302,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 405,
+    "leg_deg": -11.250686746886267,
+    "reason": null,
+    "trunk_deg": 0.5509201824478638,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 406,
+    "leg_deg": -11.546698274566381,
+    "reason": null,
+    "trunk_deg": 0.5456700174109778,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 407,
+    "leg_deg": -12.07382390748336,
+    "reason": null,
+    "trunk_deg": 1.6683241687691863,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 408,
+    "leg_deg": -12.13682282421141,
+    "reason": null,
+    "trunk_deg": 1.6683494241862358,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 409,
+    "leg_deg": -12.561773565980808,
+    "reason": null,
+    "trunk_deg": 2.2239616691564246,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 410,
+    "leg_deg": -12.925992011593388,
+    "reason": null,
+    "trunk_deg": 2.752489151173442,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 411,
+    "leg_deg": -12.32974919162918,
+    "reason": null,
+    "trunk_deg": 2.8063730226291677,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 412,
+    "leg_deg": -12.159595534504813,
+    "reason": null,
+    "trunk_deg": 2.267946723691995,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 413,
+    "leg_deg": -11.607415235866707,
+    "reason": null,
+    "trunk_deg": 2.806366382735815,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 414,
+    "leg_deg": -10.060688283878974,
+    "reason": null,
+    "trunk_deg": 2.245737389705918,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 415,
+    "leg_deg": -9.114176949196324,
+    "reason": null,
+    "trunk_deg": 2.752486444920599,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 416,
+    "leg_deg": -8.259448219232274,
+    "reason": null,
+    "trunk_deg": 2.7524923249887765,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 417,
+    "leg_deg": -7.275000852679395,
+    "reason": null,
+    "trunk_deg": 2.7524817872412477,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 418,
+    "leg_deg": -6.072454334713943,
+    "reason": null,
+    "trunk_deg": 2.7524779264088166,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 419,
+    "leg_deg": -5.440333195926029,
+    "reason": null,
+    "trunk_deg": 2.7524806663357118,
+    "warnings": []
+   },
+   {
+    "facing": -1.0,
+    "facing_source": "laba",
+    "frame": 420,
+    "leg_deg": -4.78846333183276,
+    "reason": null,
+    "trunk_deg": 3.2397036527331755,
+    "warnings": []
+   }
+  ],
+  "gait": "pas",
+  "heel_source": "rtmpose",
+  "layers": {
+   "orientation": 1,
+   "quality": 2,
+   "rtmpose": 2,
+   "rtmpose_model": "55b81170"
+  },
+  "leg": {
+   "coverage": 1.0,
+   "coverage_pct": 100,
+   "median_abs_rounded": 15,
+   "median_deg": -12.724352926729347,
+   "median_rounded": -15,
+   "n_frames": 271,
+   "q25_deg": -16.9335441918271,
+   "q25_rounded": -15,
+   "q75_deg": -10.55595851095438,
+   "q75_rounded": -10
+  },
+  "limitation": "Precizia unghiurilor în grade nu e măsurată față de o referință umană. Pentru această analiză nu există verdicte: nu știm dacă aplicația a găsit călărețul și a pus punctele corect.",
+  "n_frames": 470,
+  "orientation": {
+   "changed_frames": 0,
+   "foot_frames": 271,
+   "frames_with_facing": 271,
+   "minority_pct": 0,
+   "minority_share": 0.0,
+   "profile_unclear": false,
+   "reason": null,
+   "rule": "B4: vot pe direcția labei, 9 cadre în ±0,5 s, cel puțin 5 voturi și 2/3 acord"
+  },
+  "pipeline": "rtmpose",
+  "quality": {
+   "excluded_frames": 0,
+   "excluded_reason": "călcâi pe piciorul calului",
+   "implausible_frames": 0,
+   "version": 2,
+   "warnings": []
+  },
+  "schema_version": "1.4",
+  "segment": [
+   150,
+   420
+  ],
+  "target": {
+   "frame": 0,
+   "x": 396.5488443374634,
+   "y": 723.8996353149414
+  },
+  "trunk": {
+   "coverage": 1.0,
+   "coverage_pct": 100,
+   "median_abs_rounded": 0,
+   "median_deg": 2.313743604057381,
+   "median_rounded": 0,
+   "n_frames": 271,
+   "q25_deg": -1.1070489848964558,
+   "q25_rounded": 0,
+   "q75_deg": 4.441650439666654,
+   "q75_rounded": 5
+  },
+  "unmeasured": [],
+  "video": "clip_150054.mp4",
+  "video_hash": "f3d78630da9f"
+ },
+ "report": "Clipul clip_150054.mp4, alura declarată: pas, cadrele 150–420, alegere manuală, cadrul 0.\nTrunchiul: aproape vertical (jumătate din cadre între 0° și +5°; + înseamnă aplecat înainte), măsurat pe 100% din cadrele intervalului.\nPiciorul: călcâiul în fața șoldului, cu aproximativ 15° față de verticala prin șold (jumătate din cadre între -15° și -10°; - înseamnă călcâi în față), măsurat pe 100% din cadrele intervalului.\nCălcâi estimat cu RTMPose (calea implicită).\nSensul de mers vine din direcția labei (RTMPose, regula B4) pe 271 de cadre din interval; pe 0 dintre ele diferă de cel după nas și ureche.\nPrecizia unghiurilor în grade nu e măsurată față de o referință umană. Pentru această analiză nu există verdicte: nu știm dacă aplicația a găsit călărețul și a pus punctele corect.",
+ "summary": {
+  "fallback_reason": null,
+  "heel_source": "rtmpose",
+  "leg": {
+   "coverage": 1.0,
+   "coverage_pct": 100,
+   "median_abs_rounded": 15,
+   "median_deg": -12.724352926729347,
+   "median_rounded": -15,
+   "n_frames": 271,
+   "q25_deg": -16.9335441918271,
+   "q25_rounded": -15,
+   "q75_deg": -10.55595851095438,
+   "q75_rounded": -10
+  },
+  "pipeline": "rtmpose",
+  "trunk": {
+   "coverage": 1.0,
+   "coverage_pct": 100,
+   "median_abs_rounded": 0,
+   "median_deg": 2.313743604057381,
+   "median_rounded": 0,
+   "n_frames": 271,
+   "q25_deg": -1.1070489848964558,
+   "q25_rounded": 0,
+   "q75_deg": 4.441650439666654,
+   "q75_rounded": 5
+  },
+  "unmeasured": []
+ },
+ "video": "clip_150054.mp4"
+}

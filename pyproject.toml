@@ -1,0 +1,47 @@
+[project]
+name = "proiect-ecvestru"
+version = "0.1.0"
+description = "Analiza posturii călărețului din video"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "imageio-ffmpeg>=0.8.0",
+    "matplotlib>=3.11.2",
+    "mediapipe>=0.10.21",
+    "numpy",
+    "onnxruntime>=1.31.1",
+    "pandas>=3.0.6",
+    "pydantic>=2.14.0",
+    "scipy>=1.18.1",
+    "streamlit>=1.65.0",
+    "streamlit-image-coordinates>=0.4.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# Pachetul ecvestru se instalează editabil (uv sync), deci `import ecvestru` merge din orice pagină, fără sys.path.
+[tool.hatch.build.targets.wheel]
+packages = ["ecvestru"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.0",
+]
+
+[tool.pytest.ini_options]
+# app/: ajutoarele comune ale paginilor (clipuri_noi_comun, grila); la `streamlit run app/app.py`, Streamlit pune
+# singur folderul scriptului în sys.path.
+pythonpath = [".", "tests", "app"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+# research/ (candidatul) nu se verifică cu ruff.
+extend-exclude = ["research"]
+
+[tool.ruff.lint]
+# pyflakes, pycodestyle, ordinea importurilor, bugbear
+select = ["E", "F", "W", "I", "B"]
