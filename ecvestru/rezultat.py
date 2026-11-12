@@ -15,6 +15,8 @@ COMBINED_SCHEMA_VERSION = "1.5"   # rezultatul cu vederi (profil + față/spate)
 # AnalysisResult cu opțiunea „Scheletul calului” pornită (câmpul `horse_keypoints`). „1.6”, nu „1.5”: 1.5 e deja
 # rezultatul cu vederi (COMBINED_SCHEMA_VERSION), alt document.
 HORSE_SCHEMA_VERSION = "1.6"
+# AnalysisResult cu vederea călărețului (opțiunea „router V5”, câmpul `rider_views`), cu sau fără scheletul calului.
+RIDER_VIEW_SCHEMA_VERSION = "1.7"
 HORSE_POINTS = 17     # punctele AP-10K pe un cadru (numele și ordinea: ecvestru/cal_puncte.py, AP10K)
 QUALITY_VERSION = 2   # stratul de calitate: se mărește când se schimbă indicatorii sau poarta
 GAITS = ("pas", "trap", "galop")
@@ -149,8 +151,22 @@ class HorseKeypoints(_Model):
     frames: list[HorseFrame]
 
 
+class RiderView(_Model):
+    """Vederea călărețului țintă pe un cadru analizat, după routerul V5; None = fără țintă pe cadru."""
+    frame: int = Field(ge=0)
+    view: Literal["profil", "fata", "spate", "oblic", "nu_se_vede"] | None = None
+
+
+class RiderViews(_Model):
+    """Vederea routerului V5 (opțiunea „Vederea călărețului”): doar afișare, nicio valoare a analizei nu vine din ea."""
+    version: int = Field(description="versiunea modulului (ecvestru/router_v5.py)")
+    model: str = Field(description="primele 8 caractere din sha256-ul fișierului modelului")
+    balanced_accuracy: float | None = Field(None, description="acuratețea echilibrată a modelului pe etichetele umane")
+    frames: list[RiderView]
+
+
 class AnalysisResult(_Model):
-    schema_version: Literal["1.4", "1.6"] = SCHEMA_VERSION
+    schema_version: Literal["1.4", "1.6", "1.7"] = SCHEMA_VERSION
     video: str
     video_hash: str
     gait: Literal["pas", "trap", "galop"]
@@ -177,18 +193,26 @@ class AnalysisResult(_Model):
     horse_keypoints: HorseKeypoints | None = Field(
         None, description="scheletul calului pe cadrele analizate; doar cu opțiunea pornită (schema 1.6)")
 
+    rider_views: RiderViews | None = Field(
+        None, description="vederea călărețului după routerul V5; doar cu opțiunea pornită (schema 1.7)")
+
     @model_validator(mode="after")
-    def _schema_matches_the_horse(self) -> AnalysisResult:
-        expected = SCHEMA_VERSION if self.horse_keypoints is None else HORSE_SCHEMA_VERSION
+    def _schema_matches_the_options(self) -> AnalysisResult:
+        if self.rider_views is not None:
+            expected = RIDER_VIEW_SCHEMA_VERSION
+        else:
+            expected = SCHEMA_VERSION if self.horse_keypoints is None else HORSE_SCHEMA_VERSION
         if self.schema_version != expected:
-            raise ValueError(f"schema {self.schema_version}: cu scheletul calului se cere {HORSE_SCHEMA_VERSION}, "
-                             f"fără el {SCHEMA_VERSION}")
+            raise ValueError(f"schema {self.schema_version}: se cere {expected} (cu vederea V5: "
+                             f"{RIDER_VIEW_SCHEMA_VERSION}; cu scheletul calului: {HORSE_SCHEMA_VERSION}; fără ele: "
+                             f"{SCHEMA_VERSION})")
         return self
 
     def to_json(self) -> str:
         """Câmpurile goale lipsesc; fără bloc `orientation` (linia de bază) lipsesc și `facing*` de pe cadre, deci
         JSON-ul liniei de bază are câmpurile din schema 1.2, plus `pipeline`, `fallback_reason` și `layers`."""
-        exclude: dict = {name: True for name in ("target", "camera", "anchors", "orientation", "horse_keypoints")
+        exclude: dict = {name: True for name in ("target", "camera", "anchors", "orientation", "horse_keypoints",
+                                                 "rider_views")
                          if not getattr(self, name)}
         if self.orientation is None:
             exclude["frames"] = {"__all__": {"facing", "facing_source"}}

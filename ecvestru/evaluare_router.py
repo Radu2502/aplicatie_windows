@@ -47,7 +47,7 @@ SETS = (DEV_SET, CHECK_SET)
 SPLIT_CSV = ST.ROOT / "data" / "clipuri_noi" / "impartire.csv"
 HOLDOUT_JOURNAL = ST.ROOT / "data" / "clipuri_noi" / "verificare_jurnal.json"
 HOLDOUT_REPORT = ST.ROOT / "data" / "clipuri_noi" / "verificare_rezultat.md"
-REFERENCE_ANNOTATOR = "Radu"
+REFERENCE_ANNOTATOR = "adnotator"
 RIDER_SEPARATOR = ";"
 PERCENT = 100
 

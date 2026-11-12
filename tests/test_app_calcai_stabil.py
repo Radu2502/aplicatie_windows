@@ -77,15 +77,6 @@ def test_model_l_can_be_chosen_only_with_the_layer_on(calls):
     assert calls == [(True, HEEL_MODEL_L)]
 
 
-@needs_clips
-def test_the_baseline_switch_turns_the_layer_off(calls):
-    at = start()
-    at.checkbox(key=STABLE).check().run()
-    at.checkbox(key="an-baseline").check().run()
-    analyse(at)
-    assert calls == [(False, HEEL_MODEL_M)]
-
-
 # ---------- filmul: călcâiul din modelul folosit la măsurare ----------
 
 def test_the_model_of_a_result_comes_from_its_layers():

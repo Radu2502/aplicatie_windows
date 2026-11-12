@@ -67,9 +67,16 @@ Pe Mac cu procesor Intel aplicația nu e suportată.
    călărețului. Click-urile se țin doar în sesiunea paginii.
 5. Apasă **Analizează**. Dacă ținta se pierde, pagina oferă un buton care deschide primul cadru pierdut, pentru încă un
    click pe același călăreț.
-6. Opțional, bifează **Scheletul calului** (oprită implicit): cele 17 puncte ale calului țintă se desenează în film
-   (doar pe metoda veche) și se adaugă în JSON (`horse_keypoints`, schema 1.6); unghiurile și raportul nu se schimbă,
-   iar prima analiză a unui clip durează mai mult.
+6. Opțiunile de mai jos sunt toate oprite implicit și nu schimbă nimic dacă nu le bifezi:
+   - **Călcâi stabil (experimental)**: un strat opțional pe calea RTMPose care stabilizează călcâiul de la un cadru la
+     altul; poți alege modelul RTMPose al stratului (m sau l).
+   - **Scheletul calului**: cele 17 puncte ale calului țintă se desenează în film (doar pe metoda veche) și se adaugă
+     în JSON (`horse_keypoints`, schema 1.6); unghiurile și raportul nu se schimbă, iar prima analiză a unui clip
+     durează mai mult.
+   - **Vederea călărețului (router V5, experimental)**: doar afișare; vederea călărețului țintă (profil, față, spate,
+     oblic, nu se vede) pe fiecare cadru, pe banda de jos a filmului (metoda veche), într-un tabel și în JSON
+     (`rider_views`, schema 1.7). Nu schimbă cadrele analizate, unghiurile, abținerea sau raportul. Cere ținta
+     urmăririi, iar prima rulare pe un clip durează mai mult. Vederea poate fi greșită, mai ales între profil și oblic.
 
 ## Modelele
 
@@ -115,7 +122,9 @@ fixate în cod. După descărcare, analizele merg și fără internet.
   - `verificare.py`: unghiurile pe cadru din punctele MediaPipe, segmentele din profil, desenul scheletului;
   - `constante_candidat.py`: constantele citite din candidat;
   - `tabel_csv.py`: scrierea comună a CSV-urilor;
-  - `router_vedere.py`, `router_pilot.py`: routerul de vedere (profil / față / spate / oblic / nu se vede);
+  - `router_vedere.py`: semnalele și clasificatorul vederii (profil / față / spate / oblic / nu se vede);
+  - `router_v5.py`, `router_v5_model.json`, `semnale_tinta.py`: opțiunea „Vederea călărețului” (modelul, semnalele
+    pe ținta urmărită, netezirea în timp);
   - `analiza_vederi.py`: modulul față/spate, lipit de măsurarea din profil;
   - `intervale.py`, `evaluare_router.py`, `clipuri_noi.py`: intervalele de vedere, evaluarea routerului și citirea
     clipurilor pentru router.
@@ -153,8 +162,8 @@ Testele care cer clipuri locale (`data/videos/` și `data/split.csv`) se sar sau
    se apropie.
 2. **Viteza urmăririi pe CPU:** aproximativ 1 s pe cadru pe un laptop fără placă video; un clip cu doi călăreți poate
    dura 25–40 de minute. După aceea, totul vine din cache.
-3. **Routerul de vedere nu e activat în analiză.** Apare doar ca opțiune de afișare („Router vedere (pilot)”,
-   debifată implicit) și nu schimbă valorile sau raportul.
+3. **Vederea călărețului e doar experimentală.** Opțiunea „Vederea călărețului (router V5, experimental)” doar
+   afișează vederea; nu alege cadrele și nu schimbă valorile sau raportul. Intervalul de profil îl alegi tu.
 
 ## Licențe
 

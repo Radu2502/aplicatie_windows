@@ -15,7 +15,7 @@ from ecvestru import (
 from ecvestru import click_tinta as CT
 from ecvestru import masurare as M
 from ecvestru import progres as P
-from ecvestru import router_pilot as RP
+from ecvestru import router_v5 as RV5
 from ecvestru import schelet_cal as SC
 from ecvestru import stocare as ST
 from ecvestru import suprapunere as S
@@ -27,14 +27,9 @@ REPORT_HIDDEN = ("Raportul text nu e afișat, pentru că nu a trecut verificări
 FILM_LEGEND = ("Galben = trunchi măsurat, portocaliu = picior măsurat, gri = scheletul călărețului ales, albastru = "
                "verticala prin șold. Cadrele nemăsurate "
                "nu au lanț; banda arată motivul. Filmul nu se salvează.")
-BLUR_LABEL = "Fundal estompat"
 BLUR_NOTE = ("Estomparea ascunde detaliile, dar nu e anonimizare: o persoană poate rămâne recognoscibilă. "
              "Verifică filmul înainte să-l folosești.")
 BLUR_WAIT = "Estompez filmul (pe clipurile mari poate dura ~30 s)…"
-SMOOTH_LABEL = "Netezire pentru afișare"
-SMOOTH_HELP = ("Doar filmul și graficul: lanțul și curbele se netezesc (A2, Butterworth 6 Hz, fără întârziere), pe "
-               "segmente tăiate la goluri și la schimbarea sursei sau a orientării. Oprită implicit; valorile, "
-               "medianele, raportul și JSON-ul nu se schimbă.")
 SMOOTH_WAIT = "Netezesc lanțul din film…"
 FILM_FAILED = "Filmul nu a putut fi generat. Valorile, graficul și raportul rămân disponibile."
 TARGET_UNCLEAR = ("Clip cu țintă neclară: nu e clar cine e călărețul urmărit, deci verdictele nu acoperă acest clip. "
@@ -49,11 +44,6 @@ UNUSABLE_CLIP = "Clip marcat neutilizabil în inventar, deci rezultatul poate fi
 INTERVAL_CHECKED = "Intervalul implicit vine din data/profil.csv."
 PROFILE_UNCLEAR = ("Raportul text nu e afișat: {reason} (regula B4, strat RTMPose). Valorile, graficul și JSON-ul "
                    "rămân disponibile.")
-BASELINE_LABEL = "Doar MediaPipe (linia de bază)"
-BASELINE_NOTE = ("Implicit, călcâiul vine din RTMPose (cu fuziunea și intervalul plauzibil, fără poarta A), iar sensul "
-                 "de mers din intervalul analizat din direcția labei (regula B4). Bifat: linia de bază, doar MediaPipe "
-                 "(poarta A și intervalul), ca în evaluarea candidatului. Prima analiză RTMPose descarcă modelul o "
-                 "singură dată și durează mai mult.")
 RTMPOSE_ACTIVE = ("Călcâi RTMPose (calea implicită), cu fuziune și interval plauzibil; sensul de mers din "
                   "intervalul analizat după direcția labei (regula B4).")
 RTMPOSE_FALLBACK = "RTMPose nu a putut rula ({reason}); rezultatul e calculat pe linia de bază (MediaPipe)."
@@ -72,6 +62,14 @@ HORSE_SKELETON_HELP = ("Opțional, oprit implicit: cele 17 puncte AP-10K ale cal
                        "(`horse_keypoints`, schema 1.6). Doar afișare: unghiurile, medianele și raportul nu se "
                        "schimbă. "
                        "Prima rulare pe un clip calculează punctele calului și durează mai mult.")
+RIDER_VIEW_LABEL = "Vederea călărețului (router V5, experimental)"
+RIDER_VIEW_HELP = ("Vederea călărețului țintă (profil, față, spate, oblic, nu se vede) pe fiecare cadru analizat, în "
+                   "film (banda de jos, pe metoda veche) și în JSON (`rider_views`, schema 1.7). Nu schimbă cadrele "
+                   "analizate, unghiurile, abținerea sau raportul: intervalul de profil ales mai sus decide. Cere "
+                   "ținta urmăririi; prima rulare pe un clip durează mai mult.")
+RIDER_VIEW_NOTE = "experimental, doar afișare"
+RIDER_VIEW_MISSING = "Vederea V5 nu s-a putut calcula: {reason}"
+RIDER_VIEW_TITLE = "Vederea călărețului (router V5, experimental, doar afișare)"
 METHOD_TITLE = "Metoda"
 METHOD_HELP = ("Automată (implicit): cu doi sau mai mulți cai călăriți în primele secunde ale clipului, urmărirea "
                "țintei (cere un click pe calul călărețului, dacă nu există unul salvat); altfel, metoda veche. "
@@ -81,12 +79,6 @@ METHOD_CHOSEN = "Metoda aleasă automat: {text}."
 METHOD_MANUAL = "Metoda aleasă manual: {label}."
 TRACKED_FILM_NOTE = ("Filmul cu scheletul nu e încă disponibil pentru urmărirea țintei (scheletul RTMPose-m al "
                      "țintei); valorile, graficul și raportul sunt pe ținta urmărită.")
-ROUTER_PILOT_LABEL = "Router vedere (pilot — nu atinge pragurile stabilite)"
-ROUTER_PILOT_HELP = ("Doar afișare: vederea (profil, față, spate, oblic, nu se vede) pe intervale, pentru călărețul "
-                     "urmărit (aspect + schimb de ID). PILOT: antrenat și verificat pe 5 clipuri cu aceiași doi "
-                     "călăreți, un adnotator; nu schimbă analiza, valorile sau raportul.")
-ROUTER_PILOT_MISSING = ("Routerul pilot are vederea doar pentru cele 5 clipuri etichetate ale pilotului (după amprenta "
-                        "conținutului); acest clip nu e printre ele. Analiza merge ca de obicei.")
 JUMP_LABEL = "Deschide cadrul {frame} (primul pierdut) pentru încă un click pe {label}"
 JUMP_NOTE = ("Am deschis cadrul {frame}, primul în care ținta s-a pierdut. Dă click pe {label} în imagine, apoi apasă "
              "din nou „Analizează”: click-ul se adaugă la alegerile de până acum.")
@@ -181,9 +173,44 @@ def auto_choice(name: str, data: bytes | None, content: str) -> AU.MethodChoice:
     return M.with_temp_file(data, name, lambda path: AU.method_choice(path, name=ST.upload_name(content)))
 
 
+def rider_view_note() -> str:
+    """Textul de lângă bifa V5."""
+    return RIDER_VIEW_NOTE
+
+
+def add_views(result, name: str, data: bytes | None, click=None, stages: P.Stages | None = None):
+    """Rezultatul cu vederea V5 (pe clipul din set sau pe cel încărcat); fără țintă, rezultatul neschimbat și un
+    avertisment."""
+    try:
+        if data is None:
+            return RV5.with_views(M.V.VIDEOS / name, result, click, stages)
+        return M.with_temp_file(data, name, lambda path: RV5.with_views(path, result, click, stages))
+    except RV5.ViewsUnavailable as error:
+        st.warning(RIDER_VIEW_MISSING.format(reason=error))
+        return result
+
+
+def show_rider_views(result) -> None:
+    """Vederea V5 pe intervale de cadre consecutive cu aceeași vedere."""
+    if result.rider_views is None:
+        return
+    rows, start = [], None
+    frames = result.rider_views.frames
+    for i, f in enumerate(frames):
+        if start is None:
+            start = f
+        last = i == len(frames) - 1 or frames[i + 1].view != f.view or frames[i + 1].frame != f.frame + 1
+        if last:
+            rows.append({"de la cadrul": start.frame, "până la cadrul": f.frame,
+                         "vederea": S.VIEW_NAMES.get(f.view, "fără țintă") if f.view else "fără țintă"})
+            start = None
+    st.markdown(f"**{RIDER_VIEW_TITLE}**")
+    st.dataframe(pd.DataFrame(rows), hide_index=True)
+
+
 def run_analyses(name: str, data: bytes | None, gait: str, segment: tuple[int, int], targets: dict,
-                 heel_source: str, heel_stable: bool, heel_model: str, horse_skeleton: bool = False
-                 ) -> tuple[list, dict]:
+                 heel_source: str, heel_stable: bool, heel_model: str, horse_skeleton: bool = False,
+                 rider_view: bool = False) -> tuple[list, dict]:
     """Analiza fiecărui călăreț ales (sau a clipului, fără alegeri) și filmul lui, cu bara de progres pe etape.
     Întoarce [(eticheta, rezultatul, filmul)] și duratele etapelor pe etichetă."""
     runs = list(targets.items()) or [("", ())]
@@ -197,6 +224,8 @@ def run_analyses(name: str, data: bytes | None, gait: str, segment: tuple[int, i
             stages.plan([P.FILM])
             res = make_analysis(name, data, gait, segment, seeds, heel_source, heel_stable, heel_model, stages,
                                 horse_skeleton)
+            if rider_view:
+                res = add_views(res, name, data, None, stages)
             with stages.stage(P.FILM):
                 film = make_film(res, name, data)
             done.append((label, res, film))
@@ -204,18 +233,6 @@ def run_analyses(name: str, data: bytes | None, gait: str, segment: tuple[int, i
     finally:
         bar.empty()
     return done, times
-
-
-def show_router_pilot(content: str, n_frames: int) -> None:
-    """Vederea routerului pilot pe intervale și la un cadru ales, dacă există pentru clipul cu această amprentă."""
-    data = RP.load_views(content)
-    if data is None:
-        st.info(ROUTER_PILOT_MISSING)
-        return
-    st.caption(f"PILOT · urmărirea: {data['urmarire']} · {data['nota']}")
-    frame = st.slider("Cadrul (router)", 0, max(n_frames - 1, 0), 0, key=f"an-router-frame-{content}")
-    st.markdown(f"**Vederea la cadrul {frame}: {RP.view_at(data, frame) or '—'}**")
-    st.dataframe(pd.DataFrame(RP.view_rows(data)), hide_index=True)
 
 
 def jump_to_lost(content: str, label: str, frame: int) -> None:
@@ -400,27 +417,25 @@ st.caption(f"Cadrele {segment[0]}–{segment[1]} din {n_frames} ({fps:.0f} cadre
            + ("" if data is not None else INTERVAL_CHECKED if M.has_profile_interval(name) else INTERVAL_UNCHECKED))
 
 targets = pick_targets(name, data, content, segment) if st.checkbox(PICK_LABEL, key="an-pick") else {}
-baseline = st.checkbox(BASELINE_LABEL, key="an-baseline", help=BASELINE_NOTE)
-heel_source = HEEL_MEDIAPIPE if baseline else M.APP_DEFAULT_HEEL_SOURCE
-stable = st.checkbox(HEEL_STABLE_LABEL, value=M.APP_DEFAULT_HEEL_STABLE, key="an-heel-stable", help=HEEL_STABLE_NOTE,
-                     disabled=baseline)
+heel_source = M.APP_DEFAULT_HEEL_SOURCE
+stable = st.checkbox(HEEL_STABLE_LABEL, value=M.APP_DEFAULT_HEEL_STABLE, key="an-heel-stable", help=HEEL_STABLE_NOTE)
 heel_model = HEEL_MODEL_M
-if stable and not baseline:
+if stable:
     labels = {label: model for model, label in M.HEEL_MODEL_LABELS.items()}
     heel_model = labels[st.radio(HEEL_MODEL_TITLE, list(labels), horizontal=True, key="an-heel-model")]
-heel_stable = stable and not baseline
+heel_stable = stable
 horse_skeleton = st.checkbox(HORSE_SKELETON_LABEL, value=SC.APP_DEFAULT_HORSE_SKELETON, key="an-horse-skeleton",
                              help=HORSE_SKELETON_HELP)
+rider_view = st.checkbox(RIDER_VIEW_LABEL, value=RV5.APP_DEFAULT_RIDER_VIEW, key="an-rider-view",
+                         help=RIDER_VIEW_HELP)
+st.caption(rider_view_note())
 st.caption(LICENSE_NOTE)
 key = (content, segment, gait, heel_source, heel_stable, heel_model,
-       tuple((k, s.frame, s.x, s.y) for k, seeds in sorted(targets.items()) for s in seeds), method, horse_skeleton)
+       tuple((k, s.frame, s.x, s.y) for k, seeds in sorted(targets.items()) for s in seeds), method, horse_skeleton,
+       rider_view)
 if tracked:
     cached = AU.cache_path(name if data is None else ST.upload_name(content), content).exists()
     st.caption(AU.estimate_text(n_frames, cached))
-st.checkbox(BLUR_LABEL, key="an-blur", help=BLUR_NOTE)
-st.checkbox(SMOOTH_LABEL, key="an-smooth", help=SMOOTH_HELP)
-if st.checkbox(ROUTER_PILOT_LABEL, value=RP.ROUTER_PILOT_DEFAULT, key="an-router-pilot", help=ROUTER_PILOT_HELP):
-    show_router_pilot(content, n_frames)
 if st.button("Analizează", type="primary", key="an-run"):
     try:
         run = method
@@ -434,9 +449,11 @@ if st.button("Analizează", type="primary", key="an-run"):
             click = next(iter(targets.get(TARGET_LABELS[0], ())), None)
             done, times = run_tracked(name if data is None else ST.upload_name(content), data, gait, segment, click,
                                       horse_skeleton)
+            if rider_view:
+                done = [(label, add_views(res, name, data, click), film) for label, res, film in done]
         else:
             done, times = run_analyses(name, data, gait, segment, targets, heel_source, heel_stable, heel_model,
-                                       horse_skeleton)
+                                       horse_skeleton, rider_view)
     except AU.TargetNeeded:
         st.warning(AU.CLICK_NEEDED_TEXT)
     except ValueError as e:
@@ -454,6 +471,8 @@ if ss.get("an-result") and ss["an-result"][0] == key:
             with tab:
                 show(res, shown_film(key, label, res, film, name, data), label, chart_series(res, name, data),
                      stage_times.get(label), content)
+                show_rider_views(res)
     else:
         show(analyses[0][1], shown_film(key, "", analyses[0][1], analyses[0][2], name, data), "",
              chart_series(analyses[0][1], name, data), stage_times.get(""), content)
+        show_rider_views(analyses[0][1])

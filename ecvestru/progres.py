@@ -18,6 +18,7 @@ RTMPOSE = "RTMPose (călcâiul și sensul de mers)"
 MEASURE = "Măsurarea și calitatea"
 STABLE = "Călcâi stabil"
 HORSE_SKELETON = "Scheletul calului (AP-10K)"
+RIDER_VIEW = "Vederea călărețului (router V5)"
 FILM = "Filmul"
 FROM_CACHE = "Rezultat din cache: nicio etapă nu a rulat din nou."
 SECONDS_PER_MINUTE = 60

@@ -12,6 +12,7 @@ from ecvestru import masurare as M
 from ecvestru import raport as T
 from ecvestru import stocare as ST
 from ecvestru import suprapunere as S
+from ecvestru.rezultat import HEEL_MEDIAPIPE
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = str(ROOT / "app" / "pages" / "analiza.py")
@@ -29,11 +30,11 @@ def fake(path):
 def app(monkeypatch, tmp_path):
     monkeypatch.setenv("ECVESTRU_RESULTS", str(tmp_path))
     monkeypatch.setattr(ST, "run_candidate", fake)
-    at = AppTest.from_file(PAGE, default_timeout=120)
-    at.run()
     # Predictorul fals nu are schelet complet, deci calea RTMPose (implicită) ar cădea pe linia de bază, cu
     # avertisment; testele de aici sunt despre restul paginii, pe linia de bază (căderea: test_app_rtmpose.py).
-    at.checkbox(key="an-baseline").check().run()
+    monkeypatch.setattr(M, "APP_DEFAULT_HEEL_SOURCE", HEEL_MEDIAPIPE)
+    at = AppTest.from_file(PAGE, default_timeout=120)
+    at.run()
     assert not at.exception, at.exception
     return at
 
@@ -169,25 +170,6 @@ def test_upload_page_says_what_stays_on_disk(app):
     assert app.info[0].value.endswith(M.UPLOAD_KEPT)
 
 
-def test_blur_makes_a_second_film_without_a_second_analysis(app, monkeypatch):
-    calls = []
-    real = S.clip_film
-    monkeypatch.setattr(S, "clip_film", lambda path, res, blur=False, smooth=False:
-                        calls.append(blur) or real(path, res, blur, smooth))
-    app.button(key="an-run").click().run()
-    analysis = app.session_state["an-result"]
-    app.checkbox(key="an-blur").check().run()
-    assert not app.exception, app.exception
-    assert calls == [False, True] and app.session_state["an-result"] is analysis
-    assert any("nu e anonimizare" in c.value for c in app.caption)
-    app.run()
-    assert calls == [False, True]                                          # filmul estompat rămâne în sesiune
-
-
-def test_blur_is_off_by_default(app):
-    assert app.checkbox(key="an-blur").value is False
-
-
 def test_the_legend_of_the_film_explains_the_visibility_tiers(app):
     app.button(key="an-run").click().run()
     assert any(S.VISIBILITY_LEGEND in c.value for c in app.caption)
@@ -201,32 +183,3 @@ def test_the_legend_of_the_film_describes_rejected_people(app):
 def test_the_legend_of_the_film_explains_the_two_sides(app):
     app.button(key="an-run").click().run()
     assert any(S.SIDE_LEGEND in c.value for c in app.caption)
-
-
-# ---------- netezirea pentru afișare (A2) ----------
-
-def test_smoothing_for_display_is_off_by_default_and_says_the_values_stay(app):
-    box = app.checkbox(key="an-smooth")
-    assert box.value is False and box.label == "Netezire pentru afișare"
-    assert "valorile" in box.help and "medianele" in box.help and "nu se schimbă" in box.help
-
-
-def test_smoothing_changes_only_the_film_and_the_chart(app, monkeypatch):
-    calls = []
-    real = S.clip_film
-    monkeypatch.setattr(S, "clip_film", lambda path, res, blur=False, smooth=False:
-                        calls.append((blur, smooth)) or real(path, res, blur, smooth))
-    app.button(key="an-run").click().run()
-    analysis = app.session_state["an-result"]
-    metrics = [(m.label, m.value) for m in app.metric]
-    report = [m.value for m in app.markdown]
-    data = app.session_state["an-result"][1].to_json()
-    app.checkbox(key="an-smooth").check().run()
-    assert not app.exception, app.exception
-    assert calls == [(False, False), (False, True)] and app.session_state["an-result"] is analysis
-    assert [(m.label, m.value) for m in app.metric] == metrics and [m.value for m in app.markdown] == report
-    assert app.session_state["an-result"][1].to_json() == data
-    assert any(S.SMOOTH_NOTE in c.value for c in app.caption)
-    app.checkbox(key="an-smooth").uncheck().run()
-    assert calls == [(False, False), (False, True)]                        # filmul obișnuit era deja făcut
-    assert not any(S.SMOOTH_NOTE in c.value for c in app.caption)

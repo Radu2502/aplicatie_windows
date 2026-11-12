@@ -74,6 +74,8 @@ HORSE_LEGEND = (f"Turcoaz = scheletul calului (AP-10K), doar punctele cu scor �
                 "doar afișare, nicio valoare nu vine din el.")
 _HORSE_BONES = tuple((CP.AP10K.index(a), CP.AP10K.index(b)) for a, b in CP.AP10K_BONES)
 BAND_BGR = (0, 0, 0)
+VIEW_TEXT = "Vederea (router V5, experimental): {}"   # banda de jos, doar cu opțiunea „Vederea călărețului”
+VIEW_NAMES = {"profil": "profil", "fata": "față", "spate": "spate", "oblic": "oblic", "nu_se_vede": "nu se vede"}
 LINE_DIVISOR = 300             # grosimea liniilor: latura mică a cadrului / atât
 BAND_FRACTION = 0.05           # înălțimea benzii, din latura mică a cadrului
 BAND_MIN_PX = 22
@@ -126,6 +128,16 @@ def _draw_band(img: np.ndarray, text: str) -> None:
     ImageDraw.Draw(strip).text((BAND_MARGIN_PX, h / 2), text, fill=255, font=font, anchor="lm")
     img[:h] = BAND_BGR
     img[:h][np.asarray(strip) > 0] = (255, 255, 255)
+
+
+def _draw_view(img: np.ndarray, view: str) -> None:
+    """Banda de jos cu vederea routerului V5 (doar afișare)."""
+    text = VIEW_TEXT.format(VIEW_NAMES.get(view, view))
+    h, w = band_height(img), img.shape[1]
+    strip = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(strip).text((BAND_MARGIN_PX, h / 2), text, fill=255, font=band_font(text, w, h), anchor="lm")
+    img[-h:] = BAND_BGR
+    img[-h:][np.asarray(strip) > 0] = (255, 255, 255)
 
 
 def blur_sigma(height: int, width: int, points: dict | None) -> float:
@@ -244,7 +256,8 @@ def _draw_horse(img: np.ndarray, points: list) -> None:
 
 
 def overlay_frame(frame: np.ndarray, points: dict | None, measure: FrameMeasure, blur: bool = False,
-                  bones: tuple | None = None, rejected: list | tuple = (), horse: list | None = None) -> np.ndarray:
+                  bones: tuple | None = None, rejected: list | tuple = (), horse: list | None = None,
+                  view: str | None = None) -> np.ndarray:
     """Cadrul cu scheletul (`bones`, vezi `_draw_bones`), pe orice cadru cu călăreț, și banda.
     Lanțul apare doar pe unghiurile măsurate, niciodată pe cele respinse, deci nimic nu pare măsurat.
     `rejected` (puncte în pixeli, visibility, motiv) se desenează doar pe cadrele nemăsurate. `horse` (cele 17 puncte
@@ -260,6 +273,8 @@ def overlay_frame(frame: np.ndarray, points: dict | None, measure: FrameMeasure,
     elif points:
         _draw_chain(img, points, measure)
     _draw_band(img, band_text(measure))
+    if view is not None:
+        _draw_view(img, view)
     return img
 
 
@@ -410,17 +425,19 @@ def _encoder(width: int, height: int, fps: float, target: Path) -> subprocess.Po
 
 
 def film_bytes(video_path: Path, frames: list[FrameMeasure], raw: M.Raw, fps: float, blur: bool = False,
-               skeleton=None, horse: dict | None = None) -> bytes:
+               skeleton=None, horse: dict | None = None, views: dict | None = None) -> bytes:
     """MP4 H.264 cu câte un cadru pentru fiecare element din `frames`; fișierul temporar se șterge imediat. `horse`:
     cadru → cele 17 puncte ale calului (schelet_cal.drawn_points); None sau gol = fără scheletul calului."""
     wanted = {f.frame: f for f in frames}
     pixels = None if skeleton is None else skeleton.xy_px
     with tempfile.TemporaryDirectory(prefix="ecvestru_film_", dir=M.temp_root(), ignore_cleanup_errors=True) as tmp:
-        return _encode(video_path, wanted, raw, fps, blur, skeleton, pixels, Path(tmp) / FILM_NAME, horse or {})
+        return _encode(video_path, wanted, raw, fps, blur, skeleton, pixels, Path(tmp) / FILM_NAME, horse or {},
+                       views or {})
 
 
 def _encode(video_path: Path, wanted: dict, raw: M.Raw, fps: float, blur: bool, skeleton, pixels,
-            target: Path, horse: dict) -> bytes:
+            target: Path, horse: dict, views: dict | None = None) -> bytes:
+    views = views or {}
     cap = cv2.VideoCapture(str(video_path))
     encoder = None
     try:
@@ -435,7 +452,7 @@ def _encode(video_path: Path, wanted: dict, raw: M.Raw, fps: float, blur: bool, 
             bones = None if pixels is None else (pixels[index], skeleton.visibility[index], str(skeleton.side[index]))
             others = () if skeleton is None else skeleton.shown_rejected_at(index)
             encoder.stdin.write(overlay_frame(frame, points, wanted[index], blur, bones, others,
-                                              horse.get(index)).tobytes())
+                                              horse.get(index), views.get(index)).tobytes())
         if encoder is None:
             raise FilmError("Nu am putut face filmul: clipul nu are cadre în interval.")
         encoder.stdin.close()
@@ -472,11 +489,17 @@ def clip_film(video_path: Path, result: AnalysisResult, blur: bool = False, smoo
     scheletul calului în rezultat (opțiunea pornită), îl desenează și pe el."""
     raw, skeleton, shown = _shown_raw(video_path, result, smooth)
     horse = SC.drawn_points(result.horse_keypoints)
-    if not horse:
-        return film_bytes(Path(video_path), result.frames, raw if shown is None else shown.raw, result.fps, blur,
-                          skeleton)
+    views = drawn_views(result)
+    extra = {k: v for k, v in (("horse", horse), ("views", views)) if v}   # fără opțiuni: apelul de dinainte
     return film_bytes(Path(video_path), result.frames, raw if shown is None else shown.raw, result.fps, blur, skeleton,
-                      horse=horse)
+                      **extra)
+
+
+def drawn_views(result: AnalysisResult) -> dict[int, str]:
+    """Pentru film: cadru → vederea routerului V5 (doar cu opțiunea pornită și doar cadrele cu vedere)."""
+    if result.rider_views is None:
+        return {}
+    return {f.frame: f.view for f in result.rider_views.frames if f.view is not None}
 
 
 def display_series(video_path: Path, result: AnalysisResult, smooth: bool) -> tuple[list, list]:

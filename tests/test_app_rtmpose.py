@@ -1,5 +1,5 @@
-"""Pagina „Analiză”: RTMPose e calea implicită; comutatorul „Doar MediaPipe (linia de bază)” e oprit implicit; orice
-cădere pe linia de bază se vede în pagină; fraza despre licență."""
+"""Pagina „Analiză”: RTMPose e calea implicită; orice cădere pe linia de bază se vede în pagină; fraza despre
+licență."""
 from pathlib import Path
 
 import pytest
@@ -11,7 +11,6 @@ from ecvestru.rezultat import HEEL_MEDIAPIPE, HEEL_RTMPOSE
 
 PAGE = str(Path(__file__).resolve().parents[1] / "app" / "pages" / "analiza.py")
 pytestmark = pytest.mark.skipif(not M.dev_videos(), reason="clipurile nu sunt locale")
-KEY = "an-baseline"
 
 
 def fake(path):
@@ -47,22 +46,9 @@ def analyse(at: AppTest) -> AppTest:
     return at
 
 
-def test_the_baseline_switch_is_off_by_default_and_named_plainly(setup, monkeypatch):
-    box = start(monkeypatch).checkbox(key=KEY)
-    assert box.value is False and box.label == "Doar MediaPipe (linia de bază)"
-
-
 def test_by_default_the_analysis_asks_for_rtmpose(setup, monkeypatch):
     analyse(start(monkeypatch))
     assert setup == [HEEL_RTMPOSE]
-
-
-def test_with_the_switch_on_the_analysis_asks_for_the_baseline(setup, monkeypatch):
-    at = start(monkeypatch)
-    at.checkbox(key=KEY).check().run()
-    analyse(at)
-    assert setup == [HEEL_MEDIAPIPE]
-    assert not any("linia de bază" in w.value and "nu a putut" in w.value for w in at.warning)
 
 
 def test_a_fallback_to_the_baseline_is_visible_with_its_reason(setup, monkeypatch):
